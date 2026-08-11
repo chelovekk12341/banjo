@@ -373,9 +373,24 @@ function Banjoball:OnHeroInGameFirstTime( hero )
 	AddHiddenAbility( hero, sprintBreakName )
 	
 	Timers:CreateTimer(.04, function()
-		if hero:GetPlayerOwner():GetAssignedHero() == nil then print("Hero still nil.") end
-		InitAbilities(hero)
-	end)
+    if hero:GetPlayerOwner():GetAssignedHero() == nil then
+        print("Hero still nil.")
+    end
+
+    InitAbilities(hero)
+
+    -- Общий футбольный подкат для всех героев
+    local tackle = hero:FindAbilityByName("banjoball_tackle")
+
+    if not tackle then
+        tackle = hero:AddAbility("banjoball_tackle")
+    end
+
+    if tackle then
+        tackle:SetLevel(1)
+        tackle:SetHidden(false)
+    end
+end)
 
 	-- if #self.vHeroes >= PlayerCount then
 		-- AllPlayersSelectedHeroes = true

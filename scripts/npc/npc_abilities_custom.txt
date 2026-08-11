@@ -2998,5 +2998,26 @@
 		"AbilityCooldown"				"0"
 		"AbilityManaCost"				"0"
 	}
+	"banjoball_tackle"
+	{
+    "AbilityBehavior"          "DOTA_ABILITY_BEHAVIOR_POINT"
+    "BaseClass"                "ability_lua"
+    "ScriptFile"               "abilities/banjoball_tackle"
+    "AbilityTextureName"       "slardar_slithereen_crush"
+
+    "MaxLevel"                 "1"
+
+    "AbilityCastRange"         "350"
+    "AbilityCastPoint"         "0"
+    "AbilityCooldown"          "3"
+    "AbilityManaCost"          "0"
+
+    "AbilityValues"
+    {
+        "duration"             "0.35"
+        "speed"                "1000"
+        "radius"               "120"
+    }
+}
 }
 
