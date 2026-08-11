@@ -1,0 +1,549 @@
+﻿"lang"
+{
+	"Language"																	"Russian"
+	"Tokens"
+	{
+		"Banjoball_Ping_Ready"													"Готова"
+		"Banjoball_Ping_Cooldown"												"Перезарядка (осталось %s1 сек)"
+		"Banjoball_Ping_NoMana"													"Недостаточно маны (требуется %s1)"
+		"Banjoball_Ping_NotLearned"												"Не изучена"
+
+		//******************** GENERAL ABILITIES ********************
+		"DOTA_Tooltip_ability_kick_ball"										"Пинок"
+		"DOTA_Tooltip_ability_kick_ball_Description"							"Пинает мяч в указанном направлении.  <br><font color=\"#FF4BD6\"> Для удара пяткой нажмите на модельку героя. </font> <br><br><font color=\"#FF3333\"> На удержание мяча в зоне ворот или вблизи них отводится ОГРАНИЧЕННОЕ количество времени! <br><br> Эти действия обновляют таймер вратаря: <ul> <li> Удержание мяча за пределами площади ворот в течение <b>3 секунд</b>; <li> Мяч достаточно далеко от ворот; <li> Соперник касается мяча.  </ul> </font> <br><br><font color=\"#FF4BD6\"> Если герой владеет мячом, то при сбросе таймера появится уведомление в виде зеленого значка. </font>"
+		"DOTA_Tooltip_ability_kick_ball_kickPower"								"СИЛА УДАРА:"
+		"DOTA_Tooltip_ability_kick_ball_ballKeepingTimeInside"					"СЕКУНД ВНУТРИ:"
+		"DOTA_Tooltip_ability_kick_ball_ballKeepingTimeNearby"					"СЕКУНД РЯДОМ:"
+
+		"DOTA_Tooltip_ability_surge"											"Спринт"
+		"DOTA_Tooltip_ability_surge_Description"								"Постепенно ускоряет героя, расходуя при этом ману. <br> После отмены способности герой начинает постепенно замедляться. <br><br><font color=\"#FF4BD6\"> Чем быстрее бежит герой, тем больше маны требуется в секунду. <br> При спринте герой постепенно теряет дебафф замедления от мяча. <br><br> Если герой является вратарём или он держит мяч, тогда он быстрее ускоряется, но и тратит больше маны. </font> <br><br><font color=\"#FF3333\"> Владение мячом замедляет героя на 25%, если он не в спринте. <br><br> Если герой владеет мячом, то другие не могут взять его за спиной модели cвоего героя. </font>"
+		"DOTA_Tooltip_ability_surge_manaDrainMax"								"%МАКС МАНА/СЕК:"
+		"DOTA_Tooltip_ability_surge_manaDrainMin"								"%МИН МАНА/СЕК:"
+		"DOTA_Tooltip_ability_surge_manaRecovery"								"%МАНА РЕГЕН/СЕК:"
+		"DOTA_Tooltip_ability_surge_maximalMS"									"МАКСИМАЛЬНАЯ СКОРОСТЬ:"
+		"DOTA_Tooltip_ability_surge_baselMS"									"БАЗОВАЯ СКОРОСТЬ:"
+
+		"DOTA_Tooltip_ability_cross"											"Навес"
+		"DOTA_Tooltip_ability_cross_Description"								"Пинает мяч в воздух перед героем, потратив некоторое время на заряд удара.  <br> Повторное использование во время заряда заставляет героя пинать мяч раньше.  <br><br><font color=\"#FF4BD6\"> Чем больше времени потрачено на заряд, тем сильнее удар. <br><br> При использовании способности на модели героя мяч поднимается в воздух прямо над героем. </font>"
+		"DOTA_Tooltip_ability_cross_channelTime"								"МАКСИМАЛЬНОЕ ВРЕМЯ ЗАРЯДКИ:"
+		"DOTA_Tooltip_ability_cross_minVel"										"МИНИМАЛЬНАЯ СИЛА УДАРА:"
+		"DOTA_Tooltip_ability_cross_maxVel"										"МАКСИМАЛЬНАЯ СИЛА УДАРА:"
+		"DOTA_Tooltip_ability_glyph"											"Глиф"
+		"DOTA_Tooltip_ability_glyph_Description"								"Делает мяч недоступным для отбора у героя на %duration% секунд."
+		"DOTA_Tooltip_ability_glyph_duration"									"ВРЕМЯ НЕУЯЗВИМОСТИ:"
+
+		"DOTA_Tooltip_ability_jump"												"Прыжок"
+		"DOTA_Tooltip_ability_jump_Description"									"Подбрасывает героя в воздух, на некоторое время делая его выше ростом. <br><br><font color=\"#FF4BD6\"> Прыгает чуть выше в зоне ворот. <br><br><font color=\"#FF333\"> Нельзя использовать во время владения мячом. <br><br> Герой не сможет поймать мяч в воздухе, если его пнет противник (за исключением вратаря). </font>"
+		"DOTA_Tooltip_ability_jump_tallDur"										"ДЛИТЕЛЬНОСТЬ БАФФА РОСТА:"
+
+		//******************** HERO ABILITIES ********************
+		//Anti-Mage--------------------------
+		"DOTA_Tooltip_ability_super_sprint"										"Супер бег"
+		"DOTA_Tooltip_ability_super_sprint_Description"							"Двигает героя вперед, расходуя при этом ману. <br><br><font color=\"#FF4BD6\"> Когда Антимаг отбирает мяч, он ворует у противника ману. </font> <br><br><font color=\"#FF3333\"> Не может быть использовано, находясь в РУТЕ. </font>"
+		"DOTA_Tooltip_ability_super_sprint_mana_recovery_rate"					"%МАНА РЕГЕН/СЕК:"
+		"DOTA_Tooltip_ability_super_sprint_mana_drain_rate"						"%РАСХОД МАНЫ/СЕК:"
+		"DOTA_Tooltip_ability_super_sprint_initialMana"							"%НАЧАЛЬНЫЙ РАСХОД МАНЫ:"
+		"DOTA_Tooltip_ability_super_sprint_manaSteal"							"%ВОРУЕТ МАНЫ:"
+
+		"DOTA_Tooltip_Facet_antimage_magebanes_mirror"							"Варавайка"
+		"DOTA_Tooltip_Facet_antimage_magebanes_mirror_Description"				"Вай крута."
+		"DOTA_Tooltip_ability_testchange"										"Крутой бафф"
+		"DOTA_Tooltip_ability_testchange_Description"							"Не смотри йоу"
+
+		//Bloodseeker--------------------------
+		"DOTA_Tooltip_ability_chase"											"Погоня"
+		"DOTA_Tooltip_ability_chase_Description"								"Совершает рывок вперёд себя. <br><br><font color=\"#FF4BD6\"> Направление можно контролировать, но способность нельзя остановить. <br><br> Герой замедляет врагов вокруг себя. </font> <br><br><font color=\"#FF3333\"> Прекращает действовать, если Bloodseeker попадает в другого героя или врезается в стену. <br><br> Не замедляет вратарей. </font>"
+		"DOTA_Tooltip_ability_chase_duration"									"ДЛИТЕЛЬНОСТЬ ПОГОНИ:"
+		"DOTA_Tooltip_ability_chase_slowDur"									"ДЛИТЕЛЬНОСТЬ ЗАМЕДЛА:"
+
+		//Earthshaker--------------------------
+		"DOTA_Tooltip_ability_slam"												"Разброс"
+		"DOTA_Tooltip_ability_slam_Description"									"Ударяет по земле, отбрасывая всех, кто находится рядом. <br><br><font color=\"#FF4BD6\"> С силой запускает мяч в направлении взгляда героя. </font> <br><br><font color=\"#FF3333\"> Способность не действует на юнитов в воздухе. </font>"
+		"DOTA_Tooltip_ability_slam_delay"										"ЗАДЕРЖКА ПЕРЕД РАЗРБРОСОМ:"
+
+		//Enchantress--------------------------
+		"DOTA_Tooltip_ability_cmiuc"											"Поймай меня, если сможешь."
+		"DOTA_Tooltip_ability_cmiuc_Description"								"Накладывает дебафф, который замедляет мяч до тех пор, пока его действие не закончится или союзник не заберет мяч. <br><br><font color=\"#FF3333\"> Ничего не делает: <ul>  <li> когда СОЮЗНИК ВЛАДЕЕТ МЯЧОМ; <li> когда МЯЧ ВЫХОДИТ ЗА ПРЕДЕЛЫ ДОСЯГАЕМОСТИ.  </ul></font>"
+		"DOTA_Tooltip_ability_cmiuc_duration"									"ДЛИТЕЛЬНОСТЬ ЗАМЕДЛЕНИЯ: "
+		"DOTA_Tooltip_ability_cmiuc_slowPerSec"									"%ЗАМЕДЛЕНИЕ В СЕКУНДУ: "
+
+		"DOTA_Tooltip_ability_ricoshot"											"Рикошет"
+		"DOTA_Tooltip_ability_ricoshot_Description"								"Навешивает на мяч бафф рикошета. Мяч начинает отскакивать от вражеских героев в противоположную сторону вместо того, чтобы они его перехватили. <br>Каждый отскок увеличивает скорость полета мяча на %bounce_add_vel%%% и продлевает время действия баффа на 1 сек. <br><br><font color=\"#FF3333\">Ограничения: <ul> <li> Вратарский перехват: вратарь соперника игнорирует рикошет и ловит мяч; <li> Не работает, если соперник уже владеет мячом; <li> Прекращает действовать при остановке мяча. </ul> </font>"
+		"DOTA_Tooltip_ability_ricoshot_duration"								"ДЛИТЕЛЬНОСТЬ БАФФА:"
+		"DOTA_Tooltip_ability_ricoshot_bounces_max"								"МАКСИМАЛЬНО ОТСКОКОВ:"
+		"DOTA_Tooltip_ability_ricoshot_bounce_add_vel"							"%УСКОРЕНИЕ ЗА ОТСКОК:"
+
+		//Void Spirit------------------------
+		"DOTA_Tooltip_ability_dissimilate_exit"									"Выход"
+		"DOTA_Tooltip_ability_dissimilate_exit_Description"						"Мгновенно выйти из кругов Dissimilate в выбранном месте."
+
+		//Invoker--------------------------
+		"DOTA_Tooltip_ability_powerdash"										"Силовой рывок"
+		"DOTA_Tooltip_ability_powerdash_Description"							"Совершает короткий рывок в указанном направлении. <br><br><font color=\"#FF4BD6\"> Не позволяет герою уйти глубоко за линию ворот. </font>"
+		"DOTA_Tooltip_ability_powerdash_duration"								"ДЛИТЕЛЬНОСТЬ: "
+
+		"DOTA_Tooltip_ability_powershot"										"Заряд"
+		"DOTA_Tooltip_ability_powershot_Description"							"Заставляет мяч двигаться с нулевым трением и высокой скоростью по полю. По окончании действия способности эффект постепенно исчезает. <br><br><font color=\"#FF4BD6\"> Когда герой получает мяч, вся инерция мяча передается герою. </font>"
+		"DOTA_Tooltip_ability_powershot_channel_time"							"ДЛИТЕЛЬНОСТЬ ЗАРЯДА:"
+		"DOTA_Tooltip_ability_powershot_duration"								"ДЛИТЕЛЬНОСТЬ: "
+		"DOTA_Tooltip_ability_powershot_velocity"								"СИЛА УДАРА: "
+
+		//Juggernaut--------------------------
+		"DOTA_Tooltip_ability_omnislash"										"Ярость"
+		"DOTA_Tooltip_ability_omnislash_Description"							"Телепортирует героя несколько раз в том направлении, куда смотрит Джаггернаут. <br> Способность может быть отменена после первого прыжка при повторном нажатии. <br><br><font color=\"#FF4BD6\"> Задержка между прыжками короче, если герой владеет мячом. </font>"
+
+		"DOTA_Tooltip_ability_omnislash_delay"									"ЗАДЕРЖКА МЕЖДУ ПРЫЖКАМИ"
+		"DOTA_Tooltip_ability_omnislash_delayBall"								"ЗАДЕРЖКА С МЯЧОМ:"
+		"DOTA_Tooltip_ability_omnislash_amount_dashes"							"КОЛ-ВО ПРЫЖКОВ: "
+
+		//Lina--------------------------
+		"DOTA_Tooltip_ability_pull"												"Притяжение"
+		"DOTA_Tooltip_ability_pull_Description"									"Подтаскивает Лину к мячу. <br><br><font color=\"#FF4BD6\"> Время перезарядки зависит от того, как долго была активна способность. <br><br> Нельзя использовать, если у Лины в руках мяч."
+		"DOTA_Tooltip_ability_pull_maximalDuration"								"МАКСИМАЛЬНАЯ ДЛИТЕЛЬНОСТЬ: "
+		"DOTA_Tooltip_ability_pull_pullPower"									"УСКОРЕНИЕ ОТ ПРИТЯЖЕНИЯ: "
+		"DOTA_Tooltip_ability_pull_cooldownMin"									"МИНИЛЬМАНЫЙ КУЛДАУН:"
+		"DOTA_Tooltip_ability_pull_cooldownMax"									"МАКСИМАЛЬНЫЙ КУЛДАУН:"
+
+		"DOTA_Tooltip_ability_pull_toggle"										"Пламенное ускорение"
+		"DOTA_Tooltip_ability_pull_toggle_Description"							"Ускоряет cилу ПРИТЯЖЕНИЯ на короткий промежуток времени."
+		"DOTA_Tooltip_ability_pull_toggle_mult"									"МНОЖИТЕЛЬ УСКОРЕНИЯ:"
+		"DOTA_Tooltip_ability_pull_toggle_duration"								"ПРОДОЛЖИТЕЛЬНОСТЬ УСКОРЕНИЯ:"
+
+		//Magnus--------------------------
+		"DOTA_Tooltip_ability_skewer"											"Шампур"
+		"DOTA_Tooltip_ability_skewer_Description"								"Бросается вперед в указанном направлении, отталкивая ближайших героев. <br><br><font color=\"#FF4BD6\"> Способность не может быть использована сразу после применения способности БРОСОК НА РОГ. </font>"
+
+		"DOTA_Tooltip_ability_horn_toss"										"Бросок на Рог"
+		"DOTA_Tooltip_ability_horn_toss_Description"							"Бросает героев и мяч, запуская их в тыл Магнусу."
+
+		//Night Stalker--------------------------
+		"DOTA_Tooltip_ability_demonic_endurance_sprint"							"Демоническая Выносливость"
+		"DOTA_Tooltip_ability_demonic_endurance_sprint_Description"				"Ускоряет героя при использовании. <br><br><font color=\"#FF4BD6\"> Герой постоянно бежит. <br><br> Владение мячом замедляет героя на 15%. </font> <br><br><font color=\"#FF3333\"> Нельзя использовать без мяча.</font color>"
+		"DOTA_Tooltip_ability_demonic_endurance_sprint_mana_drain_rate"			"%РАСХОД МАНЫ/СЕК:"
+		"DOTA_Tooltip_ability_demonic_endurance_sprint_mana_recovery_rate"		"%РЕГЕН МАНЫ/СЕК:"
+		"DOTA_Tooltip_ability_demonic_endurance_bonus"							"БОНУС СКОРОСТИ"
+
+		"DOTA_Tooltip_ability_empowered_kick"									"Удар с Размаху"
+		"DOTA_Tooltip_ability_empowered_kick_Description"						"Бьет по мячу с большей силой, пряча его в тень."
+		"DOTA_Tooltip_ability_empowered_kick_kickPower"							"МОЩНОСТЬ УДАРА: "
+		"DOTA_Tooltip_ability_empowered_kick_hideDur"							"ПРОДОЛЖИТЕЛЬНОСТЬ ТЕНИ: "
+
+		"DOTA_Tooltip_ability_feint"											"Финт"
+		"DOTA_Tooltip_ability_feint_Description"								"Делает резкое движение, мгновенно направляя вашего героя в том направлении, куда вы нажали."
+
+		//Ogre-Magi--------------------------
+		"DOTA_Tooltip_ability_ogre_smash"										"Разгром Огра!"
+		"DOTA_Tooltip_ability_ogre_smash_description"							"Бросает всех перед собой с огромной силой. <br><br><font color=\"#FF4BD6\"> Сила отбрасывания мяча зависит от того, насколько далеко герой находится от вражеских ворот. <br> <b>ЧЕМ ДАЛЬШЕ, ТЕМ СИЛЬНЕЕ.</b> </font> <br><br><font color=\"#FF3333\"> Способность не действует на юнитов в воздухе. </font>"
+		"DOTA_Tooltip_ability_ogre_smash_delay"									"ЗАДЕРЖКА:"
+
+		//Abaddon--------------------------
+		"DOTA_Tooltip_ability_mist_coil"										"Mist Coil"
+		"DOTA_Tooltip_ability_mist_coil_Description"							"Отдает по 70 маны всем союзным героям в радиусе."
+		"DOTA_Tooltip_ability_mist_coil_mana_transfer"							"ПЕРЕДАВАЕМАЯ МАНА:"
+
+		"DOTA_Tooltip_ability_borrow_time"										"Borrow Time"
+		"DOTA_Tooltip_ability_borrow_time_Description"							"На время действия все затраты маны и эффекты её расхода восстанавливают ману вместо её потребления. <br><br> При активации автоматически включает бег, если он был выключен, и мгновенно перезаряжает Mist Coil."
+		"DOTA_Tooltip_ability_borrow_time_duration"								"ДЛИТЕЛЬНОСТЬ:"
+
+		"cant_pull_goalkeeper"													"Нельзя притягивать вратаря"
+
+		//Puck--------------------------
+		"DOTA_Tooltip_ability_swap"												"Подмена"
+		"DOTA_Tooltip_ability_swap_Description"									"Бросает сферу, которая меняет положение и скорость столкнувшегося персонажа на ваши собственные при столкновении с другим героем. <br><br> Если шар никого не задел, он телепортирует героя в то место, где шар исчез."
+		"DOTA_Tooltip_ability_swap_duration"									"ДЛИТЕЛЬНОСТЬ:"
+
+		//Pudge--------------------------
+		"DOTA_Tooltip_ability_hook"												"Крючок"
+		"DOTA_Tooltip_ability_hook_Description"									"Запускает хук, который, столкнувшись с героем или мячом, тащит его к заклинателю. <br><br><font color=\"#FF4BD6\"> Враги затихают, когда на них наложен крюк. <br><br> Повторное нажатие отменяет способность. </font> <br><br><font color=\"#FF3333\"> Не зацепляет мяч в зоне ворот. </font>"
+		"DOTA_Tooltip_ability_hook_delay"										"ЗАДЕРЖКА: "
+
+		"DOTA_Tooltip_ability_hook_toggle"										"Зацепите мяч"
+		"DOTA_Tooltip_ability_hook_toggle_Description"							"Крюк воздействует только на мяч."
+
+		//Queen of Pain--------------------------
+		"DOTA_Tooltip_ability_blink"											"Скачок"
+		"DOTA_Tooltip_ability_blink_Description"								"Телепортирует героя вперед с небольшой задержкой. <br><br><font color=\"#FF4BD6\"> После телепортации у героя есть некоторое время, чтобы телепортироваться обратно. <br><br> Если вы поймаете мяч после телепортации и будете держать его, пока призрак не сотрется, то время действия сократится. </font>"
+		"DOTA_Tooltip_ability_blink_distance"									"ДАЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_blink_delay"										"ЗАДЕРЖКА: "
+		"DOTA_Tooltip_ability_blink_timeToUseBacktrack"							"ВРЕМЕНИ ДО ВОЗВРАТА:"
+		"DOTA_Tooltip_ability_blink_shortCD"									"КОРОТКИЙ КУЛДАУН:"
+
+		//Shadow Fiend--------------------------
+		"DOTA_Tooltip_ability_goalspeed"										"Мастерство голов"
+		"DOTA_Tooltip_ability_goalspeed_Description"							"Делает Shadow Fiend быстрее и увеличивает силу удара за каждый гол, забитый союзниками. <br> Замедляет Shadow Fiend с каждым голом, забитым врагами. <br><br><font color=\"#FF4BD6\"> Начинает с 1 стака. <br> Количество маны отображает текущее количество стаков. <br><br> Владение мячом НЕ ЗАМЕДЛЯЕТ героя. </font>"
+		"DOTA_Tooltip_ability_goalspeed_speedbuff"								"СКОРОСТЬ ЗА СТАК:"
+		"DOTA_Tooltip_ability_goalspeed_kickbuff"								"СИЛА УДАРА ЗА СТАК:"
+		"DOTA_Tooltip_ability_goalspeed_maxstacks"								"МАКСИМУМ СТАКОВ:"
+		"DOTA_Tooltip_ability_goalspeed_minstacks"								"МИНИМУМ СТАКОВ:"
+
+		"DOTA_Tooltip_ability_shadowraze2"										"Ближний койл"
+		"DOTA_Tooltip_ability_shadowraze2_Description"							"Хватает врагов в зоне койла после недолгой задержки. <br><br> Если СФ поймает врага, он получит бафф скорости передвижения на время действия заклинания; ускоряет героя до максимальной скорости передвижения 700 при любом количестве стаков МАСТЕРСТВО ГОЛОВ."
+		"DOTA_Tooltip_ability_shadowraze2_duration"								"ДЛИТЕЛЬНОСТЬ: "
+		"DOTA_Tooltip_ability_shadowraze2_delay"								"ЗАДЕРЖКА: "
+
+		"DOTA_Tooltip_ability_shadowraze"										"Дальний койл"
+		"DOTA_Tooltip_ability_shadowraze_Description"							"Хватает врагов в зоне койла после недолгой задержки. <br><br> Если СФ поймает врага, он получит бафф скорости передвижения на время действия заклинания; ускоряет героя до максимальной скорости передвижения 700 при любом количестве стаков МАСТЕРСТВО ГОЛОВ."
+		"DOTA_Tooltip_ability_shadowraze_duration"								"ДЛИТЕЛЬНОСТЬ: "
+		"DOTA_Tooltip_ability_shadowraze_delay"									"ЗАДЕРЖКА: "
+
+		//Slark--------------------------
+		"DOTA_Tooltip_ability_backflip"											"Сальто"
+		"DOTA_Tooltip_ability_backflip_Description"								"Прыгает вперед в воздух. <br><br><font color=\"#FF4BD6\"> ПРИМЕЧАНИЕ: Мяч имеет меньшее силу трения в воздухе, поэтому все удары будут сильнее. </font> "
+
+		"DOTA_Tooltip_ability_ninja_invis"										"Походка Ниндзя"
+		"DOTA_Tooltip_ability_ninja_invis_Description"							"Делает Сларка невидимым, затрачивая при этом ману. <br><br><font color=\"#FF333\"> Прерывается, если используется САЛЬТО или СПРИНТ. </font>"
+		"DOTA_Tooltip_ability_ninja_invis_fadeDelay"							"ЗАДЕРЖКА ИСЧЕЗНОВЕНИЯ: "
+		"DOTA_Tooltip_ability_ninja_invis_manaDrain"							"%РАСХОД МАНЫ/СЕК:"
+
+		//Storm Spirit--------------------------
+		"DOTA_Tooltip_ability_ball_lightning"									"Шаровая Молния"
+		"DOTA_Tooltip_ability_ball_lightning_description"						"Превращается в энергетический шар и бросается вперед. <br><br><font color=\"#FF3333\"> Прекращает лететь при получении мяча.  <br> И нельзя использовать с мячом. <br><br> Чем меньше у героя маны, тем больше его базовая скорость передвижения. </font>"
+		"DOTA_Tooltip_ability_ball_lightning_initialManaDrain"					"%МАНЫ ДЛЯ СТАРТА: "
+		"DOTA_Tooltip_ability_ball_lightning_ManaDrainRate"						"%РАСХОД МАНЫ/СЕК: "
+		"DOTA_Tooltip_ability_ball_lightning_manaRecoveryRate"					"%РЕГЕН МАНЫ/СЕК: "
+		"DOTA_Tooltip_ability_ball_lightning_msbonus		"							"МАКС БОНУС СКОРОСТИ:"
+
+		"DOTA_Tooltip_ability_curveshot_left"									"Закрутка (по-часовой)"
+		"DOTA_Tooltip_ability_curveshot_left_description"						"Закручивает мяч по часовой стрелке. <br><br><font color=\"#FF4BD6\"> Восстанавливает ману героев при получении Закрутки. <br><br> Применяет положительный эффект увеличения регенерации маны к Storm Spirit после паса товарищу по команде. </font> <br><br><font color=\"#FF3333\"> Если противник получает Закрутку, он получает ману и лишает Шторма всего запаса маны. </font>"
+		"DOTA_Tooltip_ability_curveshot_left_manaInitial"						"%МАНА РЕГЕН (СРАЗУ): "
+		"DOTA_Tooltip_ability_curveshot_left_manaBuff"							"%МАНА РЕГЕН В СЕКУНДУ (СЕБЕ): "
+
+		"DOTA_Tooltip_ability_curveshot_right"									"Закрутка (против часовой)"
+		"DOTA_Tooltip_ability_curveshot_right_description"						"Закручивает мяч против часовой стрелки. <br><br><font color=\"#FF4BD6\"> Восстанавливает ману героев при получении Закрутки. <br><br> Применяет положительный эффект увеличения регенерации маны к Storm Spirit после паса товарищу по команде. </font> <br><br><font color=\"#FF3333\"> Если противник получает Закрутку, он получает ману и лишает Шторма всего запаса маны. </font>"
+		"DOTA_Tooltip_ability_curveshot_right_manaInitial"						"%МАНА РЕГЕН (СРАЗУ): "
+		"DOTA_Tooltip_ability_curveshot_right_manaBuff"							"%МАНА РЕГЕН В СЕКУНДУ (СЕБЕ): "
+
+		//Techies--------------------------
+		"DOTA_Tooltip_ability_remote_mine"										"Дистанционная мина"
+		"DOTA_Tooltip_ability_remote_mine_description"							"Бросает мину в указанное место. При повторном нажатии мина взрывается, придавая инерцию всем персонажам и мячу.  <br><br><font color=\"#FF4BD6\">Внимание, по истечении срока службы бомбы, мина взорвется сама по себе. <br><br> Сила удара по мячу зависит от того, как далеко герой находится от ворот противника. <br> <b>ЧЕМ ДАЛЬШЕ, ТЕМ СИЛЬНЕЕ УДАР.</b> </font>"
+		"DOTA_Tooltip_ability_remote_mine_radius"								"РАДИУС ВЗРЫВА:"
+		"DOTA_Tooltip_ability_remote_mine_duration"								"ДЛИТЕЛЬНОСТЬ МИНЫ:"
+
+		"DOTA_Tooltip_ability_remote_mine_detonate"								"Взорвать"
+		"DOTA_Tooltip_ability_remote_mine_detonate_description"					"Взрывает мину."
+
+		//Terrorblade--------------------------
+		"DOTA_Tooltip_ability_sunder"											"Раскол"
+		"DOTA_Tooltip_ability_sunder_Description"								"Обменивает инерцию всех целей в зоне поражения (включая мяч) на инерцию Террорблейда."
+
+		"DOTA_Tooltip_ability_metamorphosis"									"Метаморфоза"
+		"DOTA_Tooltip_ability_metamorphosis_Description"						"Превращает героя в демона при его заходе в ворота. <br><br> Это усиляет его: <ul>  <li> Сила ПИНКА увеличивается; </li> <li> РАСКОЛ удаляет инерцию у целей, вместо её обмена (на мяч тоже работает); </li> <li> РАСКОЛ остаётся на земле некоторое время, не исчезая сразу же. </li>  </ul> <br><br><font color=\"#FF4BD6\"> РАСКОЛ может обменять инерцию в воротах только если Террорблейд - последний игрок, который пинал мяч. </font>"
+		"DOTA_Tooltip_ability_metamorphosis_sunderDur"							"ДЛИТЕЛЬНОСТЬ РАСКОЛА:"
+		"DOTA_Tooltip_ability_metamorphosis_stun"								"ОГЛУШЕНИЕ ПРИ ВХОДЕ:"
+
+		//Weaver--------------------------
+		"DOTA_Tooltip_ability_time_lapse"										"Перемотка времени"
+		"DOTA_Tooltip_ability_time_lapse_description"							"Переместитесь назад во времени в свое положение 5 секунд назад, восстановив инерцию в том моменте. <br><br><font color=\"#FF4BD6\"> Объекты рядом с предыдущей позицией отбрасываются от заклинателя. </font>"
+		"DOTA_Tooltip_ability_time_lapse_time"									"СЕКУНД НАЗАД:"
+		"DOTA_Tooltip_ability_time_lapse_radius"								"РАДИУС ОТТАЛКИВАНИЯ:"
+
+		"DOTA_Tooltip_ability_shukuchi_sprint"									"Шукучи"
+		"DOTA_Tooltip_ability_shukuchi_sprint_Description"						"Уходит из зоны видимости во время спринта, расходуя при этом ману. <br><br><font color=\"#FF4BD6\"> Прерывается, если использована Перемотка Времени <br><br> Владение мячом замедляет героя на 20%. </font>"
+		"DOTA_Tooltip_ability_shukuchi_sprint_mana_drain_rate"					"%РАСХОД МАНЫ/СЕК:"
+		"DOTA_Tooltip_ability_shukuchi_sprint_mana_recovery_rate"				"%РЕГЕН МАНЫ/СЕК:"
+		"DOTA_Tooltip_ability_shukuchi_sprint_maximalMS"						"МАКСИМАЛЬНАЯ СКОРОСТЬ:"
+		"DOTA_Tooltip_ability_shukuchi_sprint_fade_delay"						"ЗАДЕРЖКА:"
+
+		//CLOCKWERK
+		"DOTA_Tooltip_ability_hookshot"											"Hookshot"
+		"DOTA_Tooltip_ability_hookshot_description"								"Выпускает крюк в указанном направлении. Если крюк попадает в существо, то владелец притянется к нему, на время притягивания цель получает оцепенение (если это не союзник). Если герой имел при себе мяч, то он останется в начальной точке притягивания, также не может подобрать мяч во время притягивания."
+
+		"DOTA_Tooltip_ability_clockcog"											"Powercog"
+		"DOTA_Tooltip_ability_clockcog_description"								"Ставит когу после небольшой задержки, которая стоит <font color=\"#FF4BD6\">8 секунд</font> (или пока не будет поставлена новая), кога является <font color=\"#FF4BD6\">препятствием </font> (через неё нельзя пройти), и <font color=\"#FF4BD6\"> отталкивает врагов </font>.  Если когу поставить в союзные ворота, она пропадёт через 5 секунд. <br><br> <font color=\"#FF4BD6\"> Не работает на вратарей."
+		"DOTA_Tooltip_ability_clockcog_cog_duration"							"ВРЕМЯ ЖИЗНИ КОГИ:"
+
+		//ARC WARDEN
+		"DOTA_Tooltip_ability_tempest_double"									"Tempest Double"
+		"DOTA_Tooltip_ability_tempest_double_description"						"Сконцентрировав свои осколки в единую сущность, герой создаёт свою идеальную электрическую <font color=\"#42aaff\">копию</font>, способности которой идентичны оригиналу. "
+		"DOTA_Tooltip_ability_tempest_double_duration"							"ВРЕМЯ ЖИЗНИ КОПИИ: "
+
+		"DOTA_Tooltip_ability_magnetic_field"									"Magnetic Field"
+		"DOTA_Tooltip_ability_magnetic_field_description"						"Создаёт круглое магнитное поле, которое <font color=\"#008000\">ускоряет</font>/<font color=\"#ff0000\">замедляет</font> мяч в зависимости от того, <font color=\"#008000\"> союзник </font> или <font color=\"#ff0000\"> враг </font> пнул его последним. <br><br> <font color=\"#ff0000\">Если поля пересекаются, то повлияет лишь одно поле</font>"
+		"DOTA_Tooltip_ability_magnetic_field_duration"							"ДЛИТЕЛЬНОСТЬ ПОЛЯ: "
+
+		//Enigma--------------------------
+		"DOTA_Tooltip_ability_black_hole"										"Черная засасывающая дыра"
+		"DOTA_Tooltip_ability_black_hole_Description"							"Прерываемая. Притягивает всех героев и мяч к центру черной дыры. По окончании действия или все притянутые цели разлетаются в стороны от центра. Не действует на вратаря."
+		"DOTA_Tooltip_ability_black_hole_radius"								"РАДИУС:"
+		"DOTA_Tooltip_ability_black_hole_channel_time"							"ВРЕМЯ ПРИМЕНЕНИЯ:"
+		"DOTA_Tooltip_ability_black_hole_stop"									"Отменить Черную дыру"
+
+		"DOTA_Tooltip_ability_microblink"										"Микроблинк"
+		"DOTA_Tooltip_ability_microblink_Description"							"Телепортирует героя на короткое расстояние."
+		"DOTA_Tooltip_ability_microblink_blink_range"							"ДАЛЬНОСТЬ:"
+
+		//Furion--------------------------
+		"DOTA_Tooltip_ability_furion_sprout"									"Ростки (Sprout)"
+		"DOTA_Tooltip_ability_furion_sprout_Description"						"Создает кольцо из деревьев вокруг указанной точки.<br><br>Герои и мяч, находящиеся снаружи кольца, будут оттолкнуты.<br><br>Мяч все еще может проходить сквозь деревья<br><br><font color=\"#ff3333\">Нельзя применять внутри ворот.</font>"
+		"DOTA_Tooltip_ability_furion_sprout_duration"							"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_furion_sprout_hero_push_force"					"СИЛА ОТТАЛКИВАНИЯ ГЕРОЕВ:"
+		"DOTA_Tooltip_ability_furion_sprout_ball_push_force"					"СИЛА ОТТАЛКИВАНИЯ МЯЧА:"
+
+		"DOTA_Tooltip_ability_become_oak"										"СТАТЬ ДУБОМ"
+		"DOTA_Tooltip_ability_become_oak_Description"							"Увеличивает модельку героя, а также радиус ловли мяча и смещение его ведения."
+		"DOTA_Tooltip_ability_become_oak_duration"								"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_become_oak_anim_duration"							"ВРЕМЯ ПРЕВРАЩЕНИЯ:"
+		"DOTA_Tooltip_ability_become_oak_model_scale"							"%УВЕЛИЧЕНИЕ:"
+		//"DOTA_Tooltip_ability_become_oak_ball_collision_dist"				"РАДИУС ЛОВЛИ МЯЧА:"
+		//"DOTA_Tooltip_ability_become_oak_ball_handled_offset"				"СМЕЩЕНИЕ ВЕДЕНИЯ МЯЧА:"
+		//"DOTA_Tooltip_ability_become_oak_ball_catch_height"					"ВЫСОТА ЛОВЛИ МЯЧА:"
+
+		//Tusk--------------------------
+		"DOTA_Tooltip_ability_ice_snows"										"Ледяные осколки"
+		"DOTA_Tooltip_ability_ice_snows_Description"							"Создает замкнутый барьер из ледяных осколков вокруг кастера и цели, преграждающий путь героям и мячу и запирающий их внутри."
+		"DOTA_Tooltip_ability_ice_snows_duration"								"ВРЕМЯ ДЕЙСТВИЯ:"
+
+		"DOTA_Tooltip_ability_drinking_buddies"									"Собутыльники"
+		"DOTA_Tooltip_ability_drinking_buddies_Description"						"Таск прикатывается к союзному герою. Полет проходит сквозь любые препятствия."
+		"DOTA_Tooltip_ability_drinking_buddies_duration"						"ВРЕМЯ ПРИКАТЫВАНИЯ:"
+
+		"DOTA_Tooltip_ability_tusk_curve_kick"									"Walrus Kick"
+		"DOTA_Tooltip_ability_tusk_curve_kick_Description"						"Сильно бьет по мячу с разворота, заставляя его лететь по дуге.<br><br> Направление дуги выбирается в зависимости от положения курсора мыши относительно вектора взгляда героя в момент удара.<br><br>Если клик сделан <font color=\"#FF4BD6\">левее</font> линии взгляда Tusk - мяч полетит по дуге, <font color=\"#FF4BD6\">вправо</font> и наоборот."
+
+		//Void Spirit--------------------------
+		"DOTA_Tooltip_ability_resonant_pulse"									"КОЛЕЧКО"
+		"DOTA_Tooltip_ability_resonant_pulse_Description"						"Выпускает расширяющееся кольцо энергии, которое отталкивает вражеских героев и притягивает мяч."
+		"DOTA_Tooltip_ability_resonant_pulse_radius"							"РАДИУС:"
+		"DOTA_Tooltip_ability_resonant_pulse_speed"								"СКОРОСТЬ ВОЛНЫ:"
+		"DOTA_Tooltip_ability_resonant_pulse_pull_force"						"СИЛА ОТТАЛКИВАНИЯ:"
+		"DOTA_Tooltip_ability_resonant_pulse_ball_pull_force"					"СИЛА ПРИТЯЖЕНИЯ МЯЧА:"
+
+		"DOTA_Tooltip_ability_dissimilate"										"Диссимиляция"
+		"DOTA_Tooltip_ability_dissimilate_Description"							"Герой исчезает из мира, скрывая себя и мяч. Через 1 секунду он появляется в центре выбранного портала на поле. Можно выйти преждевременно"
+		"DOTA_Tooltip_ability_dissimilate_phase_duration"						"ВРЕМЯ ИСЧЕЗНОВЕНИЯ:"
+
+		//Spectre--------------------------
+		"DOTA_Tooltip_ability_shadow_step"										"Спектральный кинжал"
+		"DOTA_Tooltip_ability_shadow_step_Description"							"Запускает кинжал в указанном направлении, оставляя за собой теневой след и накладывая оцепенение (рут) на первого врага при попадании на 1.5 секунды. Враги, наступившие на след, также приковываются к месту на 1.5 секунды. Мгновенно телепортирует Спектру к любой цели, находящейся на следе или при попадании кинжала. <br><br><font color=\"#FF3333\">Кинжал и след полностью игнорируют вратаря.</font>"
+		"DOTA_Tooltip_ability_shadow_step_speed"								"СКОРОСТЬ КИНЖАЛА:"
+		"DOTA_Tooltip_ability_shadow_step_width"								"ШИРИНА СНАРЯДА:"
+		"DOTA_Tooltip_ability_shadow_step_range"								"ДАЛЬНОСТЬ КИНЖАЛА:"
+		"DOTA_Tooltip_ability_shadow_step_trail_duration"						"ВРЕМЯ ЖИЗНИ СЛЕДА:"
+
+		"DOTA_Tooltip_ability_spectre_passive"									"Призрачное тело"
+		"DOTA_Tooltip_ability_spectre_passive_Description"						"ПЕРЕКЛЮЧАЕМАЯ. <br><br>Спектра может свободно проходить сквозь героев. Если включена, то в момент захвата мяча она совершает автоматический рывок вперед на %dash_range% единиц.<br><br>При отборе (воровстве) мяча у противника Спектра восстанавливает %mana_restore% маны."
+		"DOTA_Tooltip_ability_spectre_passive_mana_restore"						"ВОССТАНОВЛЕНИЕ МАНЫ:"
+		"DOTA_Tooltip_ability_spectre_passive_dash_range"						"ДАЛЬНОСТЬ РЫВКА:"
+
+		//Primal Beast---------------------
+		"npc_dota_hero_primal_beast"											"Primal Beast"
+		"DOTA_Tooltip_ability_primal_beast_onslaught_custom"					"Onslaught"
+		"DOTA_Tooltip_ability_primal_beast_onslaught_custom_Description"		"Заряжает разбег в выбранном направлении в течение 0.6 секунд. При повторном нажатии или окончании времени заряда стремительно бежит вперед, расталкивая врагов и непрерывно толкает мяч перед собой."
+		"DOTA_Tooltip_ability_primal_beast_onslaught_release"					"Запуск разбега"
+
+		"DOTA_Tooltip_ability_primal_beast_passive"								"Тяжелая поступь"
+		"DOTA_Tooltip_ability_primal_beast_passive_Description"					"ПЕРЕКЛЮЧАЕМАЯ. <br><br>Если включена — на Primal Beast не действует инерция (он останавливается мгновенно, без скольжения), его невозможно замедлить или оттолкнуть какими-либо внешними способностями/столкновениями."
+
+		//Ringmaster-----------------------
+		"npc_dota_hero_ringmaster"												"Ringmaster"
+		"DOTA_Tooltip_ability_ringmaster_souvenir_select"						"Выбор сувенира"
+		"DOTA_Tooltip_ability_ringmaster_souvenir_select_Description"			"Заменяет основную способность на другую в определенном порядке: <br><br> <b>Force Staff<br>Коробка фокусника<br>Моноколесо</b>."
+
+		"DOTA_Tooltip_ability_ringmaster_force_staff"							"Сувенирный Force Staff"
+		"DOTA_Tooltip_ability_ringmaster_force_staff_Description"				"Толкает героя вперед на %force_staff_distance% единиц."
+		"DOTA_Tooltip_ability_ringmaster_force_staff_force_staff_distance"		"ДАЛЬНОСТЬ ТОЛЧКА:"
+
+		"DOTA_Tooltip_ability_ringmaster_box"									"Коробка фокусника"
+		"DOTA_Tooltip_ability_ringmaster_box_Description"						"Помещает вражеского героя в коробку фокусника на %duration% сек. <br> Внутри коробки жертва не может применять свои способности, но при этом цель сохраняет возможность бегать. <br><br><font color=\"#FF3333\">Нельзя применять на владельца мяча.</font><br><br><font color=\"#FF4BD6\">Не работает на вратаря</font>"
+		"DOTA_Tooltip_ability_ringmaster_box_duration"							"ВРЕМЯ ЗАКЛЮЧЕНИЯ:"
+
+		"DOTA_Tooltip_ability_ringmaster_unicycle"								"Моноколесо"
+		"DOTA_Tooltip_ability_ringmaster_unicycle_Description"					"Герой запрыгивает на моноколесо на %duration% сек. <br> В это время обычное управление ходьбой блокируется, а герой постоянно разгоняется, сохраняет инерцию и ему сложнее поворачивать."
+		"DOTA_Tooltip_ability_ringmaster_unicycle_duration"						"ВРЕМЯ ДЕЙСТВИЯ:"
+
+		"dota_hud_error_cant_cast_on_ball_holder"								"Нельзя применять на владельца мяча"
+
+		//Silencer-------------------------
+		"npc_dota_hero_silencer"												"Silencer"
+		"DOTA_Tooltip_ability_silencer_glaive_kick"								"Glaive Kick"
+		"DOTA_Tooltip_ability_silencer_glaive_kick_Description"					"Пинает мяч в указанном направлении, который при полете пробивает насквозь первого встреченного вражеского героя."
+		"DOTA_Tooltip_ability_silencer_kick"									"Пинок Безмолвия"
+		"DOTA_Tooltip_ability_silencer_kick_Description"						"Пинает мяч в указанном направлении.  <br><font color=\"#FF4BD6\"> Для удара пяткой нажмите на модельку героя. </font> <br><br><font color=\"#FF3333\"> На удержание мяча в зоне ворот или вблизи них отводится ОГРАНИЧЕННОЕ количество времени! <br><br> Эти действия обновляют таймер вратаря: <ul> <li> Удержание мяча за пределами площади ворот в течение <b>3 секунд</b>; <li> Мяч достаточно далеко от ворот; <li> Соперник касается мяча.  </ul> </font> <br><br><font color=\"#FF4BD6\"> Враг, который примет этот мяч, получит эффект безмолвия (Silence) на 1.0 секунду и не сможет использовать способности или восполнять ману. </font>"
+		"dota_hud_error_must_have_ball"											"Необходимо владеть мячом"
+		"dota_hud_error_cant_cast_in_goal"										"Нельзя создавать в площади ворот"
+
+		//Hoodwink--------------------------
+		"npc_dota_hero_hoodwink"												"Hoodwink"
+		"DOTA_Tooltip_ability_hoodwink_acorn_decoy"								"Иллюзия (Decoy)"
+		"DOTA_Tooltip_ability_hoodwink_acorn_decoy_Description"					"Создает иллюзию Hoodwink, которая бежит в указанную точку и остается там.<br><br>Иллюзия не может подбирать мяч."
+		"DOTA_Tooltip_ability_hoodwink_acorn_decoy_duration"					"ДЛИТЕЛЬНОСТЬ:"
+		"DOTA_Tooltip_ability_hoodwink_acorn_decoy_cast_range"					"ДАЛЬНОСТЬ:"
+
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot"								"Прицельный выстрел (Scurry Shot)"
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot_Description"					"Заряжаемая способность. Выпускает снаряд в указанном направлении.<br><br>Герои и мяч, которых заденет снаряд, отлетят далеко. Мяч также отлетит.<br><br>Сила отталкивания зависит от времени зарядки — максимум достигается при <font color=\"#ffaa00\">3</font> сек, после чего не увеличивается."
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot_max_channel_time"			"МАКС. ВРЕМЯ ЗАРЯДКИ:"
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot_optimal_channel_time"		"ВРЕМЯ МАКС. СИЛЫ:"
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot_min_push_force"				"МИН. СИЛА ОТТАЛКИВАНИЯ:"
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot_max_push_force"				"МАКС. СИЛА ОТТАЛКИВАНИЯ:"
+
+		"banjoball_hud_healthbar_self"											"Скрыть/показать свой хп-бар"
+		"banjoball_hud_healthbar_ally"											"Скрыть/показать хп-бары союзников"
+		"banjoball_hud_healthbar_enemy"											"Скрыть/показать хп-бары врагов"
+		"banjoball_hud_ally_ability_toggle"										"Скрыть/показать абилки союзников"
+
+		"banjoball_hud_menu_toggle_tooltip"										"Скрыть/показать панель кнопок"
+		"banjoball_hud_store_tooltip"											"Косметика"
+		"banjoball_hud_store_close_tooltip"										"Закрыть ESC"
+		"banjoball_hud_zoom_tooltip"												"Дальность камеры<br>Сейчас: {d:curr} (мин.: 1000, макс.: 4000)<br>Используйте колесо мыши для приближения или отдаления.<br>Этот переключатель фиксирует дальность камеры."
+		"banjoball_hud_settings_tooltip"										"Настройки"
+		"banjoball_hud_gui_close"												"Закрыть/Открыть меню скиллов"
+		"banjoball_clicker_toggle"												"Включить/выключить автокликер <br><br> Когда автокликер активен, используйте бинд обычного ДВИЖЕНИЯ (ИДТИ) для ИДТИ В НАПРАВЛЕНИИ!!! <br><br> Если это все равно не помогает, убедитесь, что вы запустили игру с английской раскладкой клавиатуры. <br><br> В противном случае просто отключите его и используйте внешний автокликер, внутриигровой делает 60 кликов в секунду."
+		"gameplay_log"															"История игровых событий"
+		"shared_control"														"Управление юнитами"
+		"banjoball_store_equipped"												"✔ Использовано"
+		"banjoball_store_equip"													"Использовать"
+		"banjoball_store_locked"												"Заблокировано"
+
+		"banjoball_double_down_button"											"Удвоить рейтинг"
+		"banjoball_double_down_tooltip"											"Удвоить рейтинг по результатам этой игры. Сброс в 10:00 по МСК (UTC+3)"
+		"banjoball_double_down_activated"										"Рейтинг будет удвоен!"
+
+		//******************** HUD Menu Icons ********************
+
+		"banjoball_hud_menu_toggle_tooltip"										"Скрыть/показать панель"
+		"banjoball_hud_settings_tooltip"										"Настройки"
+		"banjoball_hud_store_tooltip"											"Магазин пятюнь"
+		"banjoball_hud_store_close_tooltip"										"Закрыть ESC"
+		"banjoball_hud_zoom_tooltip"												"Дальность камеры<br>Сейчас: {d:curr} (мин.: 1000, макс.: 4000)<br>Используйте колесо мыши для приближения или отдаления.<br>Этот переключатель фиксирует дальность камеры."
+		"banjoball_hud_gui_close"												"Закрыть/Открыть меню скиллов"
+		"Banjoball_clicker_toggle"												"Включить/выключить автокликер <br><br> Когда автокликер активен, используйте бинд обычного ДВИЖЕНИЯ (ИДТИ) для ИДТИ В НАПРАВЛЕНИИ!!! <br><br> Если это все равно не помогает, убедитесь, что вы запустили игру с английской раскладкой клавиатуры. <br><br> В противном случае просто отключите его и используйте внешний автокликер, внутриигровой делает 60 кликов в секунду."
+		"gameplay_log"															"История игровых событий"
+
+		//******************** Scoreboard ********************
+
+		"addon_game_name"														"Banjoball"
+		"banjoball"																"Banjoball"
+		"radiant_victory"														"Победа Radiant"
+		"dire_victory"															"Победа Dire"
+		
+		"scoreboard_goals"														"Г"
+		"scoreboard_assists"													"А"
+		"scoreboard_mmr"														"ММР"
+		"scoreboard_win"														"Поб"
+		"scoreboard_lose"														"Пор"
+		"scoreboard_wr"															"П%"
+		"scoreboard_steals"														"З"
+		"scoreboard_turnovers"													"Пе"
+		"scoreboard_steals_over_turnovers"										"З-Пе"
+		"scoreboard_pickups"													"По"
+		"scoreboard_passes"														"Па"
+		"scoreboard_passes_received"											"П п"
+		"scoreboard_saves"														"сейвы"
+		"scoreboard_non_saves"													"пр"
+		"scoreboard_save_percentage"											"пр%"
+		"scoreboard_total"														"За"
+		"scoreboard_possession_time"											"Вл"
+		"scoreboard_time_as_goalie"												"Вр"
+		"scoreboard_hero_name_and_desc"												"{s:hero_name}"
+
+		//******************** Scoreboard Tooltips ********************
+
+		"scoreboard_tooltip_goals"												"Голы<br>Голы в свои ворота уменьшают это значение на 1."
+		"scoreboard_tooltip_assists"											"Ассисты"
+		"scoreboard_tooltip_mmr"												"ММР"
+		"scoreboard_tooltip_win"												"Победы"
+		"scoreboard_tooltip_lose"												"Поражения"
+		"scoreboard_tooltip_wr"													"Процент побед"
+		"scoreboard_tooltip_steals"												"Захваты"
+		"scoreboard_tooltip_turnovers"											"Перехваты"
+		"scoreboard_tooltip_steals_over_turnovers"								"Захваты - Перехваты<br>Количество захватов минус количество перехватов"
+		"scoreboard_tooltip_pickups"											"Подборы"
+		"scoreboard_tooltip_passes"												"Пасы"
+		"scoreboard_tooltip_passes_received"									"Пасов получено"
+		"scoreboard_tooltip_save_percentage"									"Приемов %<br># Приемов / (# Приемов + # Пропусков)<br>Записывается только в том случае, если вы вратарь."
+		"scoreboard_tooltip_non_saves"											"Пропущенные голы<br>Количество голов, пропущенных в ваши ворота, пока вы стояли на воротах."
+		"scoreboard_tooltip_total"													"Общий зачёт<br>Формула:<br>+{d:goal_pts} * Голы<br>+ {d:assist_pts} * Ассисты<br>+ {d:steal_pts} * Захваты<br>+ {d:pickup_pts} * Подборы<br>+ {d:pass_pts} * Пасы<br>+ {d:save_pts} * Сейвы<br>- {d:turnover_pts} * Передачи"
+		"scoreboard_tooltip_possession_time"									"Время владения<br>Количество времени в секундах, в течение которого мяч был у вас."
+		"scoreboard_tooltip_time_as_goalie"										"Время вратаря<br>Общее количество времени в секундах, в течение которого вы были вратарём."
+
+		//******************** DRAFT ********************
+		"draft_title"															"ДРАФТ"
+		"draft_autostart"														"АВТОСТАРТ"
+		"draft_autostart_short"													"АВТОСТАРТ"
+		"draft_status_prep"														"ПОДГОТОВКА..."
+		"draft_status_cap_vote"													"ВЫБОР КАПИТАНА..."
+		"draft_status_pick_blue"												"ОЧЕРЕДЬ СИНИХ"
+		"draft_status_pick_red"													"ОЧЕРЕДЬ КРАСНЫХ"
+		"draft_pause"															"Пауза"
+		"draft_resume"															"Продолжить"
+		"draft_pause_infinite"													"Бесконечная"
+		"draft_vote_yes"														"ХОЧУ БЫТЬ КАПИТАНОМ"
+		"draft_vote_no"															"НЕ ХОЧУ БЫТЬ КАПИТАНОМ"
+		"draft_vote_random"														"ЗАРАНДОМИТЬ КОМАНДЫ"
+		"draft_skip"															"ПРОПУСТИТЬ ДРАФТ"
+		"draft_vote_random_tooltip"												"Необходимо {d:percent}% голосов. <br>Случайно перемешать составы команд, вместо драфта."
+		"draft_vote_training_tooltip"											"Необходимо {d:percent}% голосов. <br>Включить режим, в котором будут доступны инструменты и отладка."
+		"draft_sec_short"														"с"
+		"draft_select_team_and_roles"											"Выбор команды и роли"
+		"draft_blue"															"Синие"
+		"draft_red"																"Красные"
+		"draft_role_goalkeeper"													"Вратарь"
+		"draft_role_defender"													"Защитник"
+		"draft_role_forward"													"Нападающий"
+
+
+		//=====================================
+		//      TOOLS
+		//=====================================
+		"banjoball_tools_header"												"ИНСТРУМЕНТЫ"
+		"banjoball_tools_section_spawn"											"Создать"
+		"banjoball_tools_section_toggles"										"Переключаемое"
+		"banjoball_tools_section_actions"										"кнопки"
+
+		"banjoball_tools_spawn_ally"											"+СОЮЗНИК"
+		"banjoball_tools_spawn_enemy"											"+ВРАГ"
+		"banjoball_tools_spawn_ally_title"										"ВЫБЕРИТЕ СОЮЗНОГО ГЕРОЯ"
+		"banjoball_tools_spawn_enemy_title"										"ВЫБЕРИТЕ ВРАЖЕСКОГО ГЕРОЯ"
+		"banjoball_tools_remove_selected"										"-УДАЛИТЬ"
+		"banjoball_tools_wtf_mode"												"Режим WTF"
+		"banjoball_tools_inf_mana"												"Бесконечный бег"
+		"banjoball_tools_goal_limit_1000"										"Бесконечная игра"
+		"banjoball_tools_no_goal_respawn"										"Мгновенный старт"
+		"banjoball_tools_refresh"												"Обновить"
+		"banjoball_tools_tp_to_ball"											"Героя к мячу"
+		"banjoball_tools_ball_to_me"											"Мяч к герою"
+		"banjoball_tools_pause"													"Пауза"
+		"banjoball_tools_one_tick_pause"										">>"
+
+		"banjoball_tools_no_goal_respawn_tooltip"								"После гола герои остаются на своих местах, а мяч появляется у героя, забившего гол"
+		"banjoball_tools_wtf_mode_tooltip"										"Убирает перезарядку на способности"
+		"banjoball_tools_inf_mana_tooltip"										"Мана не тратится при беге"
+		"banjoball_tools_goal_limit_1000_tooltip"								"Для того, чтобы игра закончилась - надо забить 9999 голов"
+		"banjoball_tools_refresh_tooltip"										"Сбрасывает перезарядку и восстанавливает ману выбранному герою"
+		"banjoball_tools_spawn_ally_tooltip"									"Создать ыыы бота"
+		"banjoball_tools_spawn_enemy_tooltip"									"Создать вражеского бота"
+		"banjoball_tools_tp_to_ball_tooltip"									"Телепортирует выбранного героя к мячу"
+		"banjoball_tools_ball_to_me_tooltip"									"Телепортирует мяч в ноги к выбранному герою"
+		"banjoball_tools_pause_tooltip"											"Ставит обычную паузу"
+		"banjoball_tools_one_tick_pause_tooltip"								"Отменяет паузу и ставит паузу через 5 тиков игры "
+		"banjoball_tools_remove_selected_tooltip"								"Удаляет выделенного бота"
+		"banjoball_tools_spawn_limit_reached_tooltip"							"В команде уже 5 героев"
+
+		"banjoball_attr_strength"												"СИЛА"
+		"banjoball_attr_agility"												"ЛОВКОСТЬ"
+		"banjoball_attr_intellect"												"ИНТЕЛЛЕКТ"
+		"banjoball_attr_universal"												"УНИВЕРСАЛЬНЫЕ"
+
+		"banjoball_close_esc"													"Закрыть ESC"
+
+		//=====================================
+		//      DEBUG
+		//=====================================
+
+		"banjoball_physics_header"												"ОТЛАДКА"
+		"banjoball_physics_tick"												"Игровой тик:"
+		"banjoball_physics_speed"												"Скорость:"
+		"banjoball_physics_mana"												"Мана:"
+		"banjoball_physics_mana_drain"											"Расход маны:"
+		"banjoball_physics_mana_regen"											"Регенерация маны:"
+		"banjoball_physics_ball_speed"											"Скорость мяча:"
+		"banjoball_physics_coords"												"X/Y/Z:"
+		"banjoball_physics_ball_coords"											"Мяч X/Y/Z:"
+
+		"banjoball_debug_error_team_limit"										"[ОТЛАДКА] ОШИБКА: В команде уже 5 героев. Лимит превышен!"
+		"banjoball_debug_error_spawn_failed"									"[ОТЛАДКА] ОШИБКА: Не удалось создать бота!"
+		"banjoball_debug_error_remove_player"									"[ОТЛАДКА] ОШИБКА: Нельзя удалять реальных игроков!"
+		"banjoball_debug_error_remove_only_bots"								"[ОТЛАДКА] ОШИБКА: Можно удалять только созданных ботов"
+	}
+}
+

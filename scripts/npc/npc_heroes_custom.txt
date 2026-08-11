@@ -1,0 +1,1503 @@
+"DOTAHeroes"
+{
+    "npc_dota_hero_abaddon"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities 
+        "Ability1"                     "mist_coil"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "borrow_time"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "150"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_ALL"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "21"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2.6"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "22"
+        "AttributeAgilityGain"         "1.5"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+    "npc_dota_hero_antimage"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "banjoball_empty1"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "super_sprint"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "banjoball_empty6"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+		//Facets 
+		"Facets" 
+		{
+			"antimage_magebanes_mirror"
+			{
+				"Icon"				"area_of_effect"
+				"Color"				"Purple"
+				"GradientID"		"2"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"testchange"
+					}
+				}
+			}
+		}
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_AGILITY"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "21"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "1.6"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "24"
+        "AttributeAgilityGain"         "2.8"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+    
+    
+    "npc_dota_hero_bloodseeker"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "chase"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "banjoball_empty6"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_AGILITY"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "24"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2.7"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "24"
+        "AttributeAgilityGain"         "3.1"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+    
+    
+    "npc_dota_hero_earthshaker"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "slam"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "banjoball_empty6"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_STRENGTH"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "22"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "3.7"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "12"
+        "AttributeAgilityGain"         "1.4"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_enigma"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "microblink"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "black_hole"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_ALL"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "21"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2.5"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "14"
+        "AttributeAgilityGain"         "1"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+    "npc_dota_hero_invoker"
+    {
+         // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "powerdash"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "powershot"
+        "Ability7"                    ""
+        "Ability8"                    ""
+        "Ability9"                    ""
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_INTELLECT"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "19"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2.5"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "14"
+        "AttributeAgilityGain"         "2"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+    
+    "npc_dota_hero_juggernaut"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "omnislash"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "banjoball_empty6"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_AGILITY"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "20"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "32"
+        "AttributeAgilityGain"         "2.8"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_lina"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "pull"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "pull_toggle"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_INTELLECT"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "20"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2.4"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "23"
+        "AttributeAgilityGain"         "2.4"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_magnataur"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "skewer"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "horn_toss"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_ALL"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "23"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "3.1"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "14"
+        "AttributeAgilityGain"         "2"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+    "npc_dota_hero_furion"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "furion_sprout"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "become_oak"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_ALL"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "19"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2.6"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "14"
+        "AttributeAgilityGain"         "2.6"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+    "npc_dota_hero_night_stalker"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities 
+        "Ability1"                     "empowered_kick"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "demonic_endurance_sprint"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "feint"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_STRENGTH"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "23"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "3"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "18"
+        "AttributeAgilityGain"         "2.2"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_ogre_magi"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "ogre_smash"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "banjoball_empty6"
+        "Ability7"                    ""
+        "Ability8"                    ""
+        "Ability9"                    ""
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_STRENGTH"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "25"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "4.2"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "14"
+        "AttributeAgilityGain"         "1.5"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_puck"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities 
+        "Ability1"                     "swap"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "banjoball_empty6"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_INTELLECT"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "17"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2.4"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "14"
+        "AttributeAgilityGain"         "2.3"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_pudge"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities 
+        "Ability1"                     "hook"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "hook_toggle"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_STRENGTH"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "25"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "3"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "11"
+        "AttributeAgilityGain"         "1.4"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_queenofpain"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "blink"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "banjoball_empty6"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_INTELLECT"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "20"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2.4"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "22"
+        "AttributeAgilityGain"         "2.5"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_nevermore"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "shadowraze2"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "goalspeed"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "shadowraze"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_AGILITY"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "19"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2.7"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "25"
+        "AttributeAgilityGain"         "3.6"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_slark"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities   
+        "Ability1"                     "backflip"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "banjoball_empty6"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_AGILITY"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "20"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2.1"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "21"
+        "AttributeAgilityGain"         "1.5"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_storm_spirit"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "curveshot_left"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "ball_lightning"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "curveshot_right"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_INTELLECT"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "21"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "22"
+        "AttributeAgilityGain"         "2.6"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+    
+    "npc_dota_hero_terrorblade"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "sunder"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "metamorphosis"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_AGILITY"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "18"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "23"
+        "AttributeAgilityGain"         "4"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_tusk"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "drinking_buddies"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "tusk_curve_kick"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_STRENGTH"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "23"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "3.9"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "23"
+        "AttributeAgilityGain"         "1.9"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+    "npc_dota_hero_weaver"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "time_lapse"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "shukuchi_sprint"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "banjoball_empty6"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_AGILITY"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "16"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "17"
+        "AttributeAgilityGain"         "3.3"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+	"npc_dota_hero_rattletrap"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "hookshot"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "clockcog"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_STRENGTH"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "26"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "3.2"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "13"
+        "AttributeAgilityGain"         "2.3"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+	"npc_dota_hero_arc_warden"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "tempest_double"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "magnetic_field"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_ALL"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "20"                                  // And making sure attributes won't spoil anything.
+        "AttributeStrengthGain"        "2.2"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "20"
+        "AttributeAgilityGain"         "2.7"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+	"npc_dota_hero_techies"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "remote_mine"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "banjoball_empty6"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_ALL"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "19"                                  // And making sure attributes won't spfoil anything.
+        "AttributeStrengthGain"        "2.6"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "16"
+        "AttributeAgilityGain"         "1.8"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+	"npc_dota_hero_enchantress"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "cmiuc"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "ricoshot"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_INTELLECT"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "17"                                  // And making sure attributes won't spfoil anything.
+        "AttributeStrengthGain"        "2"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "19"
+        "AttributeAgilityGain"         "2.1"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+
+    "npc_dota_hero_void_spirit"
+    {
+        // General
+        "SoundSet"                      ""                                  // Turning off attacking, moving and death sounds.
+        "VoiceFile"                     ""                                  // Turning off unit speech.
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"            // Restricting hero from attacking.
+        "RingRadius"                   "70"                                 // Setting all heroes to have similar model radius.
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"             // This is needed to prevent heroes from going thru each other.
+
+        // Abilities
+        "Ability1"                     "resonant_pulse"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "dissimilate"
+        "Ability10"                    ""                                   // Removing talents.
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""                                   // Removing +2 attributes branch to prevent a hero to end up with more mana.
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"          // Setting all heroes to move on the ground.
+        "MovementSpeed"                "350"                                // Setting all heroes to have similar move-sepeed.
+        "MovementTurnRate"             "3.14"                               // Setting all heroes to have similar model radius turning rate.
+
+        // Stats
+        "StatusHealth"                 "100"                                // Setting all heroes to have similar stats.
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_ALL"            // Setting category for picking stage.
+        "AttributeBaseStrength"        "22"                                  // And making sure attributes won't spfoil anything.
+        "AttributeStrengthGain"        "2.6"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "21"
+        "AttributeAgilityGain"         "2.2"
+		"VisionDaytimeRange"		   "1000"                               // Setting vision just in case
+		"VisionNighttimeRange"		   "1000"
+    }
+
+    "npc_dota_hero_spectre"
+    {
+        // General
+        "SoundSet"                      ""
+        "VoiceFile"                     ""
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"
+        "RingRadius"                   "70"
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"
+
+        // Abilities
+        "Ability1"                     "shadow_step"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "spectre_passive"
+        "Ability10"                    ""
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"                "350"
+        "MovementTurnRate"             "3.14"
+
+        // Stats
+        "StatusHealth"                 "100"
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_AGILITY"
+        "AttributeBaseStrength"        "21"
+        "AttributeStrengthGain"        "2.4"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "26"
+        "AttributeAgilityGain"         "2.4"
+        "VisionDaytimeRange"           "1000"
+        "VisionNighttimeRange"         "1000"
+    }
+
+    "npc_dota_hero_primal_beast"
+    {
+        // General
+        "SoundSet"                      ""
+        "VoiceFile"                     ""
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"
+        "RingRadius"                   "140"
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"
+
+        // Abilities
+        "Ability1"                     "primal_beast_onslaught_custom"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "primal_beast_passive"
+        "Ability7"                     "primal_beast_onslaught_release"
+        "Ability10"                    ""
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"                "350"
+        "MovementTurnRate"             "3.14"
+
+        // Stats
+        "StatusHealth"                 "100"
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_STRENGTH"
+        "AttributeBaseStrength"        "26"
+        "AttributeStrengthGain"        "4.3"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "15"
+        "AttributeAgilityGain"         "1"
+        "VisionDaytimeRange"           "1000"
+        "VisionNighttimeRange"         "1000"
+    }
+    
+    "npc_dota_hero_ringmaster"
+    {
+        // General
+        "SoundSet"                      ""
+        "VoiceFile"                     ""
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"
+        "RingRadius"                   "70"
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"
+
+        // Abilities
+        "Ability1"                     "ringmaster_force_staff"
+        "Ability2"                     "kick_ball"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "ringmaster_souvenir_select"
+        "Ability7"                     "ringmaster_box"
+        "Ability8"                     "ringmaster_unicycle"
+        "Ability10"                    ""
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability18"                    ""
+        "Ability19"                    ""
+        "Ability20"                    ""
+        "Ability21"                    ""
+        "Ability22"                    ""
+        "Ability23"                    ""
+        "Ability24"                    ""
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"                "350"
+        "MovementTurnRate"             "3.14"
+
+        // Stats
+        "StatusHealth"                 "100"
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_INTELLECT"
+        "AttributeBaseStrength"        "21"
+        "AttributeStrengthGain"        "2.1"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "11"
+        "AttributeAgilityGain"         "1.6"
+        "VisionDaytimeRange"           "1000"
+        "VisionNighttimeRange"         "1000"
+    }
+
+    "npc_dota_hero_silencer"
+    {
+        // General
+        "SoundSet"                      ""
+        "VoiceFile"                     ""
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"
+        "RingRadius"                   "70"
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"
+
+        // Abilities
+        "Ability1"                     "silencer_glaive_kick"
+        "Ability2"                     "silencer_kick"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "banjoball_empty6"
+        "Ability10"                    ""
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"                "350"
+        "MovementTurnRate"             "3.14"
+
+        // Stats
+        "StatusHealth"                 "100"
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_INTELLECT"
+        "AttributeBaseStrength"        "19"
+        "AttributeStrengthGain"        "2.2"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "22"
+        "AttributeAgilityGain"         "3.0"
+        "VisionDaytimeRange"           "1000"
+        "VisionNighttimeRange"         "1000"
+    }
+
+    "npc_dota_hero_hoodwink"
+    {
+        // General
+        "SoundSet"                      ""
+        "VoiceFile"                     ""
+        "AttackCapabilities"           "DOTA_UNIT_CAP_NO_ATTACK"
+        "RingRadius"                   "70"
+        "BoundsHullName"               "DOTA_HULL_SIZE_REGULAR"
+
+        // Abilities
+        "Ability1"                     "hoodwink_acorn_decoy"
+        "Ability2"                     "banjoball_empty2"
+        "Ability3"                     "surge"
+        "Ability4"                     "cross"
+        "Ability5"                     "jump"
+        "Ability6"                     "hoodwink_scurry_shot"
+        "Ability10"                    ""
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
+        "Ability14"                    ""
+        "Ability15"                    ""
+        "Ability16"                    ""
+        "Ability17"                    ""
+        "Ability25"                    ""
+
+        // Movement
+        "MovementCapabilities"         "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"                "350"
+        "MovementTurnRate"             "3.14"
+
+        // Stats
+        "StatusHealth"                 "100"
+        "StatusMana"                   "100"
+        "StatusHealthRegen"            "0.0"
+        "StatusManaRegen"              "0"
+        "AttributePrimary"             "DOTA_ATTRIBUTE_AGILITY"
+        "AttributeBaseStrength"        "18"
+        "AttributeStrengthGain"        "2.0"
+        "AttributeBaseIntelligence"    "0"
+        "AttributeIntelligenceGain"    "0"
+        "AttributeBaseAgility"         "24"
+        "AttributeAgilityGain"         "3.5"
+        "VisionDaytimeRange"           "1000"
+        "VisionNighttimeRange"         "1000"
+    }
+}

@@ -1,0 +1,1 @@
+-- Renamed to tusk_curve_kick.lua to avoid conflict with built-in Dota 2 C++ tusk_walrus_kick ability.

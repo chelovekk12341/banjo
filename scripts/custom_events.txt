@@ -1,0 +1,109 @@
+// No spaces in event names, max length 32
+// All strings are case sensitive
+//
+// valid data key types are:
+//   string : a zero terminated string
+//   bool   : unsigned int, 1 bit
+//   byte   : unsigned int, 8 bit
+//   short  : signed int, 16 bit
+//   long   : signed int, 32 bit
+//   float  : float, 32 bit
+//   uint64 : unsigned int 64 bit
+//   local  : any data, but not networked to clients
+//
+// following key names are reserved:
+//   local      : if set to 1, event is not networked to clients
+//   unreliable : networked, but unreliable
+//   suppress   : never fire this event
+//   time	: firing server time
+//   eventid	: holds the event ID
+
+"CustomEvents"
+{
+    "custom_error_show"
+    {
+        "player_ID"    			 "short"
+        "_error"        		 "string"
+    }
+    "toggle_show_ability_silenced"
+    {
+        "player_ID"    			  "short"
+        "ability_index"      	  "short"
+    }
+
+    "all_players_loaded" { }
+
+    "game_over" { }
+
+    "custom_game_setup" { }
+
+    "hero_picked"
+    {
+        "player_ID"             "short"
+    }
+	
+    "activate_player"
+    {
+        "player_ID"               "short"
+        "player_name"             "string"
+    }
+
+    "update_scoreboard_value"
+    {
+        "player_ID"                "short"
+        "key"                      "string"
+        "value"                    "float"
+    }
+
+    // Stat collection
+    "stat_collection_part"
+    {
+        "data"          "string"
+    }
+
+    "stat_collection_send"
+    {
+    }
+
+    "draft_captain_choice"
+    {
+        "player_id"               "short"
+        "role"                    "short"
+        "player_name"             "string"
+    }
+
+    "draft_register_player"
+    {
+        "player_id"               "short"
+        "player_name"             "string"
+    }
+
+    "draft_pick_player"
+    {
+        "player_id"               "short"
+        "target_player_id"        "short"
+    }
+
+    "draft_toggle_pause"
+    {
+        "player_id"               "short"
+    }
+
+    "draft_prefer_team"
+    {
+        "player_id"               "short"
+        "team"                    "short"
+    }
+
+    "toggle_ally_abilities"
+    {
+        "playerID"                "short"
+        "hidden"                  "short"
+    }
+
+    "apply_ally_abilities_setting"
+    {
+        "hidden"                  "bool"
+    }
+}
+

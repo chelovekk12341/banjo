@@ -1,0 +1,87 @@
+Update v5.x:
+(General)
+0. BUG FIXED: Heroes are no longer stuck with each other when using the JUMP ability.
+0. BUG FIXED: The volume of all sounds is equal.
+0. BUG FIXED: Slight teleportation no longer appears inside the GOAL AREA.
+0. BUG FIXED: Tower hitbox is reduced and matches the model on the map.
+0. BUG FIXED: Heroes getting pulled into each other when sliding.
+0. Roshan gives a high five with a goalie if nobody is nearby.
+0. Hero's models are increased visually (their real radius stays the same).
+0. The cooldowns for second abilities are now shown with hidden hud.
+
+(Enchantress)
+0. RICOCHET & CMIUC: Abilities are removed.
+0. IMPETUS: A new ability that allows the hero to shoot an IMPETUS that causes the ball to bounce towards Enchantress upon landing (even if the ball is possessed by another hero).
+0. IMPETUS: It also enchants an area where it landed for a duration that depends on the traveled distance; the enchanted area applies a debuff of slowness, causing the ball to stop.
+
+(Magnus)
+0. HORN TOSS: Usage particles are added.
+
+0. Points are count differently now.
+0. new aiming mechanic
+0. Descriptions updated to the current patch.
+
+(Terrorblade)
+0. SUNDER: Correct AoE particle.
+
+---------------------------------------------------------
+Update v5.x:
+(Brewmaster)
+1. A hero is created, he has I GOT DRUNK* and I GOT TIRED abilities.
+2. I GOT DRUNK: makes Brew larger and reverse the movement. While he's large, he cannot run and jump. Get's ability I'M TIRED.
+3. I'M TIRED: Brew drops to the ground smashing everything. The ball slips if it was underneath Brew's belly.
+
+(Dark Seer)
+1. A hero is created. Has VACUUM and ION SHELL abilities.
+2. VACUUM: pulls everything in radius towards the center of the AoE. Hero pulling power is lower. The cast range is low.
+3. ION SHELL: a bit of reworked RICKOSHET ability. The cast range is low.
+
+(Sand King)
+1. A hero is created. Has a LOW DASH and SAND STORM abilities.
+2. SAND STORM: creates a sandstorm in a small AoE, which slows the ball and all heroes in it. Also unlocks the LOW DASH ability.
+3. LOW DASH: pushes the hero to the target point while slowing and tossing everything (including the ball) above you, simultaneously reducing all momentum to zero.
+
+(Void Spirit)
+1. A hero is created. Has VOID FORM and REMNANT abilities. They have connected cooldown (that means, using one ability makes another go on cooldown either way).
+2. VOID FORM: fades away and creates rings under his foot. Choosing the ring makes you immediately teleport to its center. If you hold the ball, ability to raise the ball in the air makes it travel to your chosen position.
+3. REMNANT: choose the target point and vector; Remnant creates one there and kicks or pulls a hero who steps in its way. BKB for the ball for 2 seconds, no friction.
+
+
+---------------------------------------------------------
+Ideas:
+(General)
+1. NEW RATING SYSTEM: Counts average MMR of the teams and the game impact of each player. Points are calculated by a different formula.
+2. Created seasons and tournaments.
+3. Panorama Script: Captains and bans, custom hero layout, repaired GUI, hints on the pause screen, one unique hero per team, options before the game (AI gk; unranked; cheats).
+4. BACKWARDS ability is added. Toggling it allows you to move backwards without turning the hero.
+5. TACKLE is added. Hero charges the ability while moving in the direction he looked at using the skill; the length of the tackle depends on the charging time. After a hero stops, he's staggered for a bit.
+6. ACCELERATION is added. Movespeed increases slowly if you move in one direction.
+7. FAST TURN added, new ability immediately turns a hero in the clicked direction.
+8. The OVERALL GAME TIME is limited; the game is divided into rounds. Each round, players can choose a card to change their hero.
+
+(Anti-Mage)
+(Bloodseeker)
+(Earthshaker)
+(Invoker)
+(Juggernaut)
+(Lina)
+(Magnus)
+(Night-Stalker)
+(Ogre Magi)
+(Puck)
+(Pudge)
+(Queen of Pain)
+(Shadow Fiend)
+(Slark)
+(Storm Spirit)
+(Terrorblade)
+(Weaver)
+
+
+---------------------------------------------------------
+ANNOUNCEMENT:
+Update v5.4:
+
+Changed everything! The patch before the tournament.
+
+For more info [url=https://discord.gg/9KAagHcMxy] JOIN OR DISCORD SERVER [/url]

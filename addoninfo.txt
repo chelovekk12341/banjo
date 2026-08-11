@@ -1,0 +1,15 @@
+"AddonInfo"
+{
+	"TeamCount" "3"
+	"maps"			"sunny_field"
+	"IsPlayable"	"1"
+	"DisableWearables"	"1"
+	"sunny_field"
+	{
+		"MaxPlayers"                    "10"
+	}
+	"Default_Keys"
+	{
+		
+	}
+}

@@ -1,0 +1,3002 @@
+"DOTAAbilities"
+{
+	"Version"		"1"
+	
+	"time_lapse"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/time_lapse"
+		"AbilityTextureName"			"weaver_time_lapse"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"32"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		"AbilityValues"
+		{
+			"time"						"7"
+			"radius"					"400"
+		}
+	}
+	
+	"shukuchi_sprint_break"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"shukuchi_sprint_break"
+		"HotKeyOverride"    			"E"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"surge_break"
+			}
+		}
+	}
+
+	"shukuchi_sprint"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"weaver_shukuchi"
+		"HotKeyOverride"    			"E"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+		
+		"precache"
+		{
+			"particle"		"particles\units\heroes\hero_pugna\pugna_decrepify.vpcf"
+			"particle"		"particles\generic_hero_status\status_invisibility_start.vpcf"
+			
+		}
+
+		"AbilityValues"
+		{
+			"mana_drain_rate" 			"66.7"
+			"mana_recovery_rate"		"66.7"
+			"movespeed_increase"		"700"
+			"fade_delay"				"0.1"
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_shukuchi_fade"
+				"Target" 		"CASTER"
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"surge"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_shukuchi_fade"
+			{
+				"EffectName"		"particles\generic_hero_status\status_invisibility_start.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"TextureName"     	"weaver_shukuchi"
+				"Duration"			"%fade_delay"
+				"OnCreated"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_shukuchi_invis"
+						"Target" 		"TARGET"	
+					}
+				}
+				"OnDestroy"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_shukuchi_invis"
+						"Target" 		"TARGET"	
+					}
+				}
+			}
+
+			"modifier_shukuchi_invis"
+			{
+				"EffectName"		"particles\units\heroes\hero_pugna\pugna_decrepify.vpcf"
+				"EffectAttachType"	"follow_overhead"
+				"TextureName"     	"weaver_shukuchi"				
+			}
+		}
+	}
+	
+	"ogre_smash"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"ogre_magi_multicast"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"32"
+		"AnimationPlaybackRate"			"1.50"
+
+		"AbilityManaCost"				"0"
+		
+		"precache"
+		{
+			"particle"	"particles/generic_gameplay/generic_stunned_old.vpcf"
+		}
+		
+		"AbilityValues"
+		{
+			"duration"					"1.0"
+			"slow_duration"				"0.75"
+			"daze_duration"				"2.00"
+			"slow_strength"				"-99.99"
+			"delay"						"0.12"
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"ogre_smash"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_smash_animation"
+				"Target" 		"CASTER"
+			}
+			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_ogresmash_daze"
+			{
+				"Duration"					"%slow_duration"
+				"IsDebuff"					"1"
+				"EffectName"				"particles/generic_gameplay/generic_stunned_old.vpcf"//"particles/units/heroes/hero_sniper/sniper_headshot_slow.vpcf"
+				"EffectAttachType"			"follow_origin"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%slow_strength"
+				}
+			}
+			"modifier_ogresmash_daze_wall"
+			{
+				"Duration"					"%daze_duration"
+				"IsDebuff"					"1"
+				"EffectName"				"particles/generic_gameplay/generic_stunned_old.vpcf"//"particles/units/heroes/hero_sniper/sniper_headshot_slow.vpcf"
+				"EffectAttachType"			"follow_origin"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%slow_strength"
+				}
+
+				"States"
+				{
+					//"MODIFIER_STATE_SILENCED"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_smash_animation"
+			{
+				"IsHidden"					"1"
+				"OverrideAnimation" 		"ACT_DOTA_CAST_ABILITY_2"
+				"AnimationPlaybackRate"		"1.0"
+				"States"
+				{
+				"MODIFIER_STATE_STUNNED"				"MODIFIER_STATE_VALUE_DISABLED"
+				}
+			}
+		}
+	}
+	"shadowraze"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"nevermore_shadowraze3"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		"LinkedAbility"					"shadowraze2"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"32"
+		"AbilityCastRange"				"750"
+		"AbilityCastAnimation"			"ACT_DOTA_RAZE_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0"
+
+
+		"AbilityManaCost"				"0"
+		"AbilityValues"
+		{
+			"range"						"750"
+			"duration"					"2"
+			"delay"						"0.4"
+		}
+		"precache"
+		{
+			"particle"	"particles/generic_gameplay/generic_stunned_old.vpcf"
+			"particle"	"particles/nevermore_shadowraze.vpcf"
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"shadowraze"
+			}
+			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_shadowraze_root"
+			{
+				"Duration"					"1.5"
+				"IsDebuff"					"1"
+				"EffectName"				"particles/generic_gameplay/generic_stunned_old.vpcf"//"particles/units/heroes/hero_sniper/sniper_headshot_slow.vpcf"
+				"EffectAttachType"			"follow_origin"
+				
+				"States"
+				{
+					"MODIFIER_STATE_ROOTED"				"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+	"shadowraze2"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"nevermore_shadowraze2"
+		"MaxLevel"						"1"
+		//"HotKeyOverride"    			"Q"
+		"LinkedAbility"					"shadowraze"
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCooldown"				"32"
+		"AbilityCastAnimation"			"ACT_DOTA_RAZE_2"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastPoint"				"0"
+
+
+		"AbilityManaCost"				"0"
+		"AbilityValues"
+		{
+			"range"						"400"
+			"duration"					"2"
+			"delay"						"0.4"
+		}
+		"precache"
+		{
+			"particle"	"particles/generic_gameplay/generic_stunned_old.vpcf"
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"shadowraze"
+			}
+			
+		}
+		
+		"Modifiers"
+		{
+			"modifier_shadowraze_root"
+			{
+				"Duration"					"1.5"
+				"IsDebuff"					"1"
+				"EffectName"				"particles/generic_gameplay/generic_stunned_old.vpcf"//"particles/units/heroes/hero_sniper/sniper_headshot_slow.vpcf"
+				"EffectAttachType"			"follow_origin"
+				
+				"States"
+				{
+					"MODIFIER_STATE_ROOTED"				"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+	"ball_lightning"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"storm_spirit_ball_lightning"
+		"HotKeyOverride"    			"E"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+		
+		"precache"
+		{
+			
+		}
+
+		"OnSpellStart"
+		{
+			
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"surge"
+			}
+		}
+
+		"AbilityValues"
+		{
+			"InitialManaDrain"			"30"
+			"ManaDrainRate" 			"20"
+			"manaRecoveryRate"			"4"
+			"msbonus"					"175"
+		}	
+	}
+	
+	"ball_lightning_break"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"ball_lightning_break"
+		"HotKeyOverride"    			"E"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"surge_break"
+			}
+		}
+	}
+	
+	"curveshot_right"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/curveshot"
+		"AbilityTextureName"			"curveshot_right"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_ATTACK"
+
+		"AbilityManaCost"				"0"
+		
+		"AbilityValues"
+		{
+			"manaInitial"				"100.0"
+			"manaBuff"					"30"
+		}
+	}	
+	
+	"curveshot_left"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/curveshot"
+		"AbilityTextureName"			"curveshot_left"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_ATTACK"
+
+		"AbilityManaCost"				"0"
+		
+		"AbilityValues"
+		{
+			"manaInitial"				"100.0"
+			"manaBuff"					"30"
+		}
+	}
+	
+	"hook_root"
+	{
+		"AbilityBehavior"	 			"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"BaseClass" 					"ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+		"MaxLevel"                      "1"
+		
+		"Modifiers"
+		{
+			"modifier_hook_root"
+			{
+				"TextureName"     		"hook_ally"
+				"Passive"				"1"
+				
+				"States"
+				{
+					"MODIFIER_STATE_ROOTED"				"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}	
+	"hook"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"pudge_meat_hook"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"9999"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"32"
+		"AbilityCastAnimation"			"ACT_DOTA_IDLE"
+
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"				"POINT"
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"hook"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_hook_animation"
+				"Target" 		"CASTER"
+			}
+		}
+		"AbilityValues"
+		{
+			"delay"		 				"0.25"
+		}
+		"Modifiers"
+		{
+			"modifier_hook_animation"
+			{
+				"IsHidden"					"1"
+				"OverrideAnimation" 		"ACT_DOTA_OVERRIDE_ABILITY_1"
+				"AnimationPlaybackRate"		"2.00"
+				
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"				"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+	
+	"hook_toggle"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/hook_toggle"
+		"AbilityTextureName"			"hook_cancel"
+		"HotKeyOverride"    			"R"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"mult"						"3"
+			"duration"					"0.5"
+		}
+	}
+	
+	"hook_drop"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"hook_cancel"
+		"HotKeyOverride"    			"Q"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"hook_cancel"
+			}
+		}
+	}
+	
+	"hook_retract"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"hook_cancel"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"hook_cancel"
+			}
+		}
+	}
+	
+	"demonic_endurance_sprint"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"night_stalker_hunter_in_the_night"
+		"HotKeyOverride"    			"E"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"surge"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"			"modifier_demonic_endurance"
+				"Target"				"CASTER"
+			}
+		}
+		"AbilityValues"
+		{
+			"mana_drain_rate" 			"133.3"
+			"mana_recovery_rate"		"71.4"
+		}
+		"Modifiers"
+		{
+			"modifier_demonic_endurance"
+			{
+				"TextureName"      				 "night_stalker_hunter_in_the_night"
+			}
+		}
+	}
+
+	"demonic_endurance_sprint_break"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"demonic_endurance_sprint_break"
+		"HotKeyOverride"    			"E"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"surge_break"
+			}
+		}
+	}
+	
+	"empowered_kick"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/empowered_kick"
+		"AbilityTextureName"			"night_stalker/empowered_kick"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_ATTACK"
+
+		"AbilityManaCost"				"0"
+		
+		"AbilityValues"
+		{
+			"kickPower" 				"1900"
+			"hideDur"					"0.5"
+		}
+	}
+
+	"feint"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/feint"
+		"AbilityTextureName"			"night_stalker/feint"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"32"
+		"AbilityCastAnimation"			"ACT_DOTA_ATTACK"
+
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"impulse"					"150"	// Сила толчка в сторону курсора
+		}
+	}
+
+	"swap"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/swap"
+		"AbilityTextureName"			"puck_illusory_orb"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"3100"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"32"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"duration"	 				"1.25"
+		}
+	}
+	"mist_coil"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/mist_coil"
+		"AbilityTextureName"			"abaddon_death_coil"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		"AbilityCastRange"				"900"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.1"
+		"AbilityCooldown"				"32"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"mana_transfer"		"70"
+			"mana_drain"		"50"
+		}
+	}
+	"borrow_time"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/borrow_time"
+		"AbilityTextureName"			"abaddon_borrowed_time"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"duration"			"3.0"
+		}
+	}
+	"swap_stop"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/swap"
+		"AbilityTextureName"			"puck_ethereal_jaunt"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+	}
+	// CLOCKWERK rattletrap
+	"hookshot"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/hookshot"
+		"AbilityTextureName"			"rattletrap_hookshot"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"3150"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"32"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		"AbilityManaCost"				"0"
+
+
+	}
+	"clockcog"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/clockcog"
+		"AbilityTextureName"			"rattletrap_power_cogs"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCooldown"				"32"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"cog_duration"				"8.0"
+		}
+	}
+
+
+	"drinking_buddies"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_SELF"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/drinking_buddies"
+		"AbilityTextureName"			"tusk_drinking_buddies"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"D"
+
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"duration"					"0.5"
+		}
+	}
+
+	"tusk_curve_kick"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/tusk_curve_kick"
+		"AbilityTextureName"			"tusk_walrus_kick"
+		"MaxLevel"						"1"
+		"HotKeyOverride"				"R"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.05"
+		"AbilityCooldown"				"32"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+
+		"AbilityManaCost"				"0"
+	}
+
+	// Arc warden
+	"tempest_double"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"                    "abilities/tempest_double"
+		"AbilityTextureName"            "arc_warden_tempest_double"                                                 // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+		"MaxLevel"						"1"
+		
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"              "0.15"
+		"AbilityCastAnimation"          "ACT_DOTA_OVERRIDE_ABILITY_4"
+		
+
+		"AbilityCastRange"              "700"
+
+
+		// Time     
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"               "32"
+		"AbilityValues"
+		{
+			"duration"					"15"
+		}
+
+	}
+	"magnetic_field"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "ability_lua"
+		"ScriptFile"                    "abilities/magnetic_field"
+		"AbilityTextureName"            "arc_warden_magnetic_field"                                                 // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT"
+		"MaxLevel"						"1"
+		
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"              "0.15"
+		"AbilityCastAnimation"          "ACT_DOTA_AW_MAGNETIC_FIELD"
+		
+
+		"AbilityCastRange"              "1500"
+
+
+		// Time     
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"               "32"
+
+		"AbilityValues"
+		{
+			"duration"					"5.5"
+		}
+	}
+	
+	
+	// TECHIES
+	"remote_mine_detonate"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/remote_mine"
+		"AbilityTextureName"			"techies_remote_mines_self_detonate"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+	}
+	
+	"remote_mine"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/remote_mine"
+		"AbilityTextureName"			"techies_remote_mines"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.05"
+		"AbilityCooldown"				"32"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+		"AOERadius"						"150"
+		"AnimationPlaybackRate"			"1.50"
+		
+		"AbilityManaCost"				"0"
+		
+		"precache"
+		{
+			"model"		"models/heroes/techies/fx_techies_remotebomb.vmdl"
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"min_range"					"250"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max_range"					"1200"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"300"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"10.0"
+			}
+		}
+	}
+	
+	//ENCHANTRESS 
+	"ricoshot"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/ricoshot.lua"
+		"AbilityTextureName"			"enchantress_impetus"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"D"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+		"AbilityCastAnimation"			"ACT_DOTA_ATTACK"
+		"AnimationPlaybackRate"			"1"
+
+		"AbilityValues"
+		{
+			"duration"					"3.0"
+			"bounces_max"				"3"
+			"bounce_add_vel"			"20"
+		}
+	}
+	"cmiuc"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/cmiuc.lua"
+		"AbilityTextureName"			"enchantress_enchant"
+		"MaxLevel"						"1"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"2200"
+		"AbilityCooldown"				"40"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		"AnimationPlaybackRate"			"1"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"timerDur"				"1"
+			}
+		}
+
+		"precache"
+		{
+			"particle"		"particles/econ/items/enchantress/enchantress_2021_immortal/enchantress_2021_immortal_14_imps.vpcf"
+			
+		}
+		
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"				"POINT"
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"cmiuc"
+			}
+		}
+	}
+	"blink"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/blink"
+		"AbilityTextureName"			"queenofpain_blink"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"730"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+		
+		"precache"
+		{
+			"particle"		"particles/blink/blink_smoke.vpcf"
+		}
+		"AbilityValues"
+		{
+			"distance"					"750"
+			"delay"						"0.2"
+			"timeToUseBacktrack"		"2"
+			"shortCD"					"12"
+		}
+	}
+	
+	
+	
+	"blink_backtrack"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/blink"
+		"AbilityTextureName"			"blink_backtrack"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"4"
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+	}
+
+	"queenofpain_blink_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"             		"queenofpain_blink"
+		"MaxLevel" 						"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"9000"
+		"AbilityCastPoint"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"blink_range"				"3000"
+			"min_blink_range"			"0"
+		}
+	}
+
+	"omnislash"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/omnislash"
+		"AbilityTextureName"			"juggernaut_omni_slash"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+		
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+		}
+		
+		"AbilityValues"
+		{
+			"delay"						"0.6"
+			"delayBall"					"0.3"
+			"amount_dashes" 			"5"
+		}
+	}
+	"omnislash_stop"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/omnislash"
+		"AbilityTextureName"			"kunkka_x_marks_the_spot"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+	}
+
+	"spawn_anim"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"rubick_empty1"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_SPAWN"
+		//"AnimationPlaybackRate"
+
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+	}
+
+	"roshan_slam_anim"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"rubick_empty1"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		//"AnimationPlaybackRate"
+
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+	}
+	"glyph"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/general/glyph"
+		"AbilityTextureName"			"general/glyph"
+		"HotKeyOverride"    			"F"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"32"
+		"MaxLevel"						"1"
+		"AbilityCastPoint"				"0"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"duration"					"0.6"
+		}
+	}
+
+	"jump"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/jump"
+		"AbilityTextureName"			"rubick_telekinesis"
+		"HotKeyOverride"    			"F"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"2"
+
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+		
+		"AbilityValues"
+		{
+			"tallDur"					"0.18"
+		}
+	}
+
+	"chase"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/chase"
+		"AbilityTextureName"			"bloodseeker_bloodrage"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1346"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"duration"					"0.3"
+			"slowDur"					"1"
+		}
+	}
+
+	"powershot"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"vengefulspirit_magic_missile"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.35"
+		"AbilityCastAnimation"			"ACT_DOTA_TELEPORT"
+		"AnimationPlaybackRate"			"1.25"
+
+		"AbilityManaCost"				"0"
+		
+		"AbilityValues"
+		{
+			"channel_time"				"0.35"
+			"duration"					"5"
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"				"POINT"
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"powershot"
+			}
+		}
+		
+		"Modifiers"
+		{
+			"modifier_powershot"
+			{
+				"IsHidden"	"1"
+				
+				"States"
+				{
+					"MODIFIER_STATE_ROOTED"				"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
+	"invoker_attribute_bonus"
+	{
+		// Because Invoker has extra stats right now because fk u dota.
+		"AbilityValues"
+		{
+			"attribute_bonus_per_level"		"0.0"
+		}
+	}
+
+	"powerdash"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"invoker_ghost_walk"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"390"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"40"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_GHOST_WALK"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"duration"					"0.1"
+		}
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Powerdash"
+				"Target" 		"CASTER"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_powerdash"
+				"Target" 		"CASTER"
+			}
+			"RunScript"
+			{
+				"Target"				"POINT"
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"powerdash"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_powerdash"
+			{
+				"IsHidden"	"1"
+
+				"StatusEffectName" 		"particles/status_fx/status_effect_alacrity.vpcf" 	   
+				"StatusEffectPriority"  "10"
+
+				"TextureName"     	"invoker_ghost_walk"
+				"OverrideAnimation"     "ACT_DOTA_CAST_COLD_SNAP"
+
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/units/heroes/hero_invoker/invoker_alacrity.vpcf"
+						"EffectAttachType"  "follow_overhead"
+						"Target"            "CASTER"
+					}
+
+					"AttachEffect"
+					{
+						"EffectName"        "particles/units/heroes/hero_invoker/invoker_alacrity_buff.vpcf"
+						"EffectAttachType"  "follow_overhead"
+						"Target"            "CASTER"
+					}
+				}
+			}
+		}
+	}
+
+
+	"ninja_invis_sprint_break"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"ninja_invis_sprint_break"
+		"HotKeyOverride"    			"R"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"stealth_sprint_break"
+			}
+		}
+	}
+
+	"ninja_invis"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"clinkz_wind_walk"
+		"HotKeyOverride"    			"E"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+		
+		"precache"
+		{
+			"particle"		"particles\units\heroes\hero_pugna\pugna_decrepify.vpcf"
+			"particle"		"particles\generic_hero_status\status_invisibility_start.vpcf"
+			
+		}
+
+		"AbilityValues"
+		{
+			"fadeDelay"					"0.5"
+			"movespeedBonus"			"37.5"
+			"manaDrain" 				"20"
+			"manaRecovery"				"10"
+			"maximalMS"					"900"
+			"minimalMS" 				"350"
+			"accelerationTime"			"4"
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				//"ModifierName"	"modifier_ninja_invis"
+				"ModifierName"	"modifier_ninja_fade"
+				"Target" 		"CASTER"
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"stealth_sprint"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_ninja_fade"
+			{
+				"EffectName"		"particles\generic_hero_status\status_invisibility_start.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"TextureName"     	"slark_dark_pact"
+				"Duration"			"%fade_delay"
+				"OnCreated"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_ninja_invis"
+						"Target" 		"TARGET"	
+					}
+				}
+				"OnDestroy"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName"	"modifier_ninja_invis"
+						"Target" 		"TARGET"	
+					}
+				}
+			}
+
+			"modifier_ninja_invis"
+			{
+				"EffectName"		"particles\units\heroes\hero_pugna\pugna_decrepify.vpcf"
+				"EffectAttachType"	"follow_overhead"
+				"TextureName"     	"slark_dark_pact"
+				//"OverrideAnimation"     "ACT_DOTA_RUN+shadow_dance"
+			}
+		}
+
+	}
+
+	"backflip"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"slark_pounce"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_SLARK_POUNCE"
+		"AnimationPlaybackRate"			".5"
+		"AbilityCooldown"				"32"
+
+		"AbilityManaCost"				"0"
+		"MaxLevel"						"1"
+		
+		"OnSpellStart"
+		{
+
+			"RunScript"
+			{
+				"Target"				"POINT"
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"backflip"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"			"modifier_salto_animation"
+				"Target" 				"CASTER"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_salto_animation"
+			{
+				"IsHidden"					"1"
+				"OverrideAnimation" 		"ACT_DOTA_CAST_ABILITY_1"
+				"AnimationPlaybackRate"		"1"
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"				"MODIFIER_STATE_VALUE_DISABLED"
+				}
+			}
+		}
+	}
+
+	"super_sprint"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"centaur_stampede"
+		"HotKeyOverride"    			"E"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"10"
+
+		"AbilityValues"
+		{
+			"mana_recovery_rate"		"15"
+			"mana_drain_rate" 			"50"
+			"initialMana" 				"15"
+			"manaSteal"					"100"
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"surge"
+			}
+		}
+	}
+
+	"super_sprint_break"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"super_sprint_break"
+		"HotKeyOverride"    			"E"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"surge_break"
+			}
+		}
+	}
+
+	"frown"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"frown"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"1.5"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"text_particle"
+			}
+		}
+	}
+
+	"pass_me"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"pass_me"
+		"HotKeyOverride"    			"D"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"1.5"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"text_particle"
+			}
+		}
+	}
+
+	"surge"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"surge"
+		"HotKeyOverride"    			"E"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"surge"
+			}
+		}
+		"AbilityValues"
+		{
+			"manaDrainMax"	 			"33"
+			"manaDrainMin" 				"13"
+			"manaRecovery"				"10"
+			"maximalMS"					"700"
+			"baselMS"					"350"
+		}
+	}
+
+	"surge_break"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"surge_break"
+		"HotKeyOverride"    			"E"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"surge_break"
+			}
+		}
+	}
+
+	"pull_break"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"lina_pull_break"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"pull_break"
+			}
+		}
+	}
+
+		"pull_toggle"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/pull_toggle"
+		"AbilityTextureName"			"lina_fiery_soul"
+		"HotKeyOverride"    			"R"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"mult"						"2"
+			//"duration"					"0.5"
+		}
+	}
+
+	"pull"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"lina_pull"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"0"
+		"MaxLevel"						"1"
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"pull"
+			}
+		}
+		"AbilityValues"
+		{
+			"maximalDuration"			"4"
+			"pullPower"					"150"
+			"cooldownMin"				"32"
+			"cooldownMax"				"40"
+		}
+	}
+
+	"slam"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/slam"
+		"AbilityTextureName"			"earthshaker/slam"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"36"
+		"MaxLevel"						"1"
+		"AbilityCastPoint"				"0"
+		"AbilityManaCost"				"0"
+	}
+
+
+	"skewer"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/skewer"
+		"AbilityTextureName"			"magnataur_skewer"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"W"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"32"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+
+		"AbilityManaCost"				"0"
+		
+		"Modifiers"
+		{
+			"modifier_skewer_stun"
+			{
+				"Duration"					"99"
+				"IsHidden"					"1"
+				"OverrideAnimation" 		"ACT_DOTA_CAST_ABILITY_3"
+				//"AnimationPlaybackRate"		"0.60"
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"				"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+	"horn_toss"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/horn_toss"
+		"AbilityTextureName"			"magnataur_horn_toss"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"350"
+		"AbilityCooldown"				"32"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		"AnimationPlaybackRate"			"1.20"
+
+		"AbilityManaCost"				"0"
+	}
+	"impetus"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/impetus"
+		"AbilityTextureName"			"enchantress_impetus"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"99999"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"24"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+
+		"AbilityManaCost"				"0"
+	}
+	// "goalsmovespeed"
+	// {
+		// "ID"					"9877"	
+		// "AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		// "BaseClass"				"ability_datadriven"
+		// "AbilityTextureName"	"nevermore_necromastery"
+		// "MaxLevel"				"1"
+		// "Modifiers"
+		// {
+			// "goalsmovespeed"
+			// {
+				// "IsBuff"				"1"
+				// "IsHidden"				"1"
+				// "IsPurgable"			"0"
+				// "Passive"				"1"
+
+				// "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE"
+				// "Properties"
+				// {
+					// "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "8"
+					// "MODIFIER_PROPERTY_TURN_RATE_PERCENTAGE" "10"
+				// }
+			// }
+		// }
+	// }
+	"goalspeed"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"modifiers/goalspeed.lua"
+		"AbilityTextureName"			"nevermore_necromastery"
+		"MaxLevel"						"1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"speedbuff"					"66.6"
+			"kickbuff"					"91.6"
+			"maxstacks" 				"3"
+			"minstacks"					"0"
+		}
+	}	
+	"truesight"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"keeper_of_the_light_blinding_light"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"W"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"9999"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_ATTACK"
+
+		"AbilityManaCost"				"0"
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"truesight"
+			}
+
+		}
+	}
+	"sunder"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/sunder.lua"
+		"AbilityTextureName"			"terrorblade_sunder"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"40"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+		"AnimationPlaybackRate"			"1.50"
+		
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"reduction"					"300"
+			"cooldownGate"				"42"
+		}
+	}
+	"metamorphosis"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"terrorblade_metamorphosis"
+		"MaxLevel"						"1"
+
+		"AbilityValues"
+		{
+			"sunderDur"					"0.3"
+			"stun"						"0.15"
+		}
+	}
+
+	"kick_ball"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"Kick"//"brewmaster_earth_hurl_boulder"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"W"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_ATTACK"
+
+		"AbilityManaCost"				"0"
+		
+		"AbilityValues"
+		{
+			"kickPower"					"1600"
+			"ballKeepingTimeInside"		"4"
+			"ballKeepingTimeNearby"		"1"
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"				"POINT"
+				"ScriptFile"			"scripts/vscripts/ability_proxy.lua"
+				"Function"				"kick_ball"
+			}
+
+		}
+	}
+	
+	"cross"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/cross.lua"
+		"AbilityTextureName"			"skywrath_mage_arcane_bolt"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"D"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"1"
+		"AbilityCastAnimation"			"ACT_DOTA_ATTACK"
+		"AnimationPlaybackRate"			"0.5"
+
+		"AbilityManaCost"				"0"
+		
+		"AbilityValues"
+		{
+			"channelTime"				"0.7"
+			"minVel"					"1050"
+			"maxVel"					"1500"
+		}
+	}
+
+	"cross_finish"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/cross.lua"
+		"AbilityTextureName"			"throw_ball"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"D"
+
+		"AbilityCooldown"				"0"
+		"AbilityCastPoint"				"0"
+		"AbilityManaCost"				"0"
+	}
+
+	//-------------------
+	// Dummy stuff
+	//-------------------
+  
+	"ball_passive"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"Modifiers"
+		{
+			"modifier_ball_passive"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+
+				"States"
+				{
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+					//"MODIFIER_STATE_FLYING"					"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
+	"rooted_passive"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"Modifiers"
+		{
+			"modifier_rooted_passive"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+
+				"States"
+				{
+					"MODIFIER_STATE_ROOTED"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
+	"endround_passive"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"Modifiers"
+		{
+			"modifier_endround_rooted_passive"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+
+				"States"
+				{
+					"MODIFIER_STATE_ROOTED"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_endround_silenced_passive"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+
+				"States"
+				{
+					"MODIFIER_STATE_SILENCED"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
+	"referee_passive"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"MaxLevel" 						"1"
+	
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"Modifiers"
+		{
+			"modifier_referee_passive"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+
+				"States"
+				{
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+					//"MODIFIER_STATE_NOT_ON_MINIMAP"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FLYING"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"OnAttackLanded"
+				// "%attack_damage" is set to the damage value before mitigation
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/ability_proxy.lua"
+						"Function"		"OnRefereeAttacked"
+					}
+				}
+			}
+		}
+	}
+
+	"stun_passive"
+	{
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" 					"ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+		"MaxLevel"                      "1"
+
+		"Modifiers"
+		{
+			"modifier_stun_passive"
+			{
+				"Passive"                        "1"
+				"IsHidden"                       "1"    
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"				"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
+	"dummy_passive"
+	{
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" 					"ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+		"MaxLevel"                      "1"
+
+		"Modifiers"
+		{
+			"modifier_dummy_passive"
+			{
+				"Passive"                        "1"
+				"IsHidden"                       "1"    
+				"States"
+				{
+					"MODIFIER_STATE_INVULNERABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+  
+	"global_dummy_passive"
+	{
+		"AbilityBehavior" 			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" 					"ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+		"MaxLevel"                      "1"
+		
+		"AbilityValues"
+		{
+			"massive_slow"				"-999.99"
+			"tackle_duration"			"2.0"
+		}
+		
+		"Modifiers"
+		{
+			"modifier_dummy_passive"
+			{
+				"Passive"                        "1"
+				"IsHidden"                       "1"    
+				"States"
+				{
+					"MODIFIER_STATE_INVULNERABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_creep_spectator"
+			{
+				"Passive"                        "1"
+				"IsHidden"                       "1"    
+				"States"
+				{
+					"MODIFIER_STATE_NOT_ON_MINIMAP"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					//"MODIFIER_STATE_DISARMED"				"MODIFIER_STATE_VALUE_ENABLED"
+					//"MODIFIER_STATE_FLYING"					"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_vision_dummy"
+			{
+				"Passive"                        "1"
+				"IsHidden"                       "1"    
+				"States"
+				{
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			//"modifier_movespeed"
+			//{
+			//	"Passive"                        "1"
+			//	"IsHidden"                       "1"    
+			//	"Properties"
+			//	{
+			//	    "MODIFIER_PROPERTY_MOVESPEED_BASE_OVERRIDE" "1" 
+			//	}
+			//}
+			"modifier_flail_passive"
+			{
+				"Passive"                        "1"
+				"IsHidden"                       "1"    
+				"OverrideAnimation"     "ACT_DOTA_FLAIL"
+			}
+			"modifier_victory_anim"
+			{
+				"Passive"                        "1"
+				"IsHidden"                       "1"    
+				"OverrideAnimation"     "ACT_DOTA_TELEPORT"
+			}
+			"modifier_defeat_anim"
+			{
+				"Passive"                        "1"
+				"IsHidden"                       "1"    
+				"OverrideAnimation"     "ACT_DOTA_DISABLED"
+			}
+			"modifier_haste_anim"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+		
+				"OverrideAnimation"     "ACT_DOTA_RUN"
+			}
+			"modifier_ball_controller"
+			{
+				"Passive"                        "1"
+				"TextureName"      "earth_spirit_rolling_boulder"
+			}
+			"modifier_goalie"
+			{
+				"Passive"                        "1"
+				"TextureName"      "goalie"
+			}
+			"modifier_disarmed_on"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+			
+				"States"
+				{
+					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_disarmed_off"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+			
+				"States"
+				{
+					"MODIFIER_STATE_DISARMED"		"MODIFIER_STATE_VALUE_DISABLED"
+				}
+			}
+			"modifier_phased_on"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+			
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_phased_off"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+			
+				"States"
+				{
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_DISABLED"
+				}
+			}
+			"modifier_flying_on"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+			
+				"States"
+				{
+					"MODIFIER_STATE_FLYING"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_hero_passive"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+
+				"States"
+				{
+					//"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					//"MODIFIER_STATE_FLYING"			"MODIFIER_STATE_VALUE_ENABLED"
+					//"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_fake_injury_freeze"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+
+				"States"
+				{
+					"MODIFIER_STATE_FROZEN"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_tackle_slow"
+			{
+				"Duration"					"%tackle_duration"
+				"IsDebuff"					"1"
+				"EffectName"				"particles\units\heroes\hero_bloodseeker\bloodseeker_rupture.vpcf"
+				"EffectAttachType"			"follow_origin"
+				
+				"OnCreated"
+				{
+					"FireSound"
+					{
+						"EffectName"		"Hero_Bloodseeker.Rupture"
+						"Target" 			"TARGET"
+					}
+				}
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%massive_slow"
+				}
+			}
+		}
+	}
+
+    "banjoball_empty1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5343"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+		"BaseClass" 					"ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+	
+	"banjoball_empty2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5343"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+		"BaseClass" 					"ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+	
+	"banjoball_empty3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5343"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+		"BaseClass" 					"ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+	
+	"banjoball_empty4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5343"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+		"BaseClass" 					"ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+	
+	"banjoball_empty5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"15343"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+		"BaseClass" 					"ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+	
+	"banjoball_empty6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		//"ID"							"5343"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"0"
+		"BaseClass" 					"ability_datadriven"
+		"AbilityTextureName"            "rubick_empty1"
+	}
+	"special_bonus_attributes"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"730"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel"						"7"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"value"		"0 0 0 0 0 0 0"
+		}
+	}
+	"black_hole"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/black_hole"
+		"AbilityTextureName"			"enigma_black_hole"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+
+		"precache"
+		{
+			"particle"		"particles/units/heroes/hero_enigma/enigma_blackhole.vpcf"
+			"particle"		"particles/items_fx/blink_dagger_start.vpcf"
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+		}
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"32"
+		"AbilityChannelTime"			"3.0"
+		"AbilityManaCost"				"0"
+		"AOERadius"						"600"
+
+		"AbilityValues"
+		{
+			"radius"			"600"
+			"channel_time"		"3.0"
+		}
+	}
+	
+	"black_hole_stop"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/black_hole"
+		"AbilityTextureName"			"enigma_black_hole"
+		"MaxLevel"						"1"
+	}
+
+	"microblink"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/microblink"
+		"AbilityTextureName"			"antimage_blink"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"300"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"blink_range"				"300"
+		}
+	}
+
+	"furion_sprout"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/furion_sprout"
+		"AbilityTextureName"			"furion_sprout"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"duration"					"2.0"
+			"radius"					"150"
+			"num_trees"					"8"
+			"hero_push_force"			"300"
+			"ball_push_force"			"500"
+		}
+	}
+
+	"testchange"
+	{
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/antimage/testchange"
+	}
+
+	
+	"act_dota_idle" { "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET" "BaseClass" "ability_datadriven" "AbilityTextureName" "rubick_empty1" "AbilityCastPoint" "0" "AbilityCooldown" "0" "AbilityCastAnimation" "ACT_DOTA_IDLE" "AbilityManaCost" "0" "MaxLevel" "1" }
+	"act_dota_spawn" { "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET" "BaseClass" "ability_datadriven" "AbilityTextureName" "rubick_empty1" "AbilityCastPoint" "0" "AbilityCooldown" "0" "AbilityCastAnimation" "ACT_DOTA_SPAWN" "AbilityManaCost" "0" "MaxLevel" "1" }
+	"act_dota_die" { "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET" "BaseClass" "ability_datadriven" "AbilityTextureName" "rubick_empty1" "AbilityCastPoint" "0" "AbilityCooldown" "0" "AbilityCastAnimation" "ACT_DOTA_DIE" "AbilityManaCost" "0" "MaxLevel" "1" }
+	"act_dota_attack" { "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET" "BaseClass" "ability_datadriven" "AbilityTextureName" "rubick_empty1" "AbilityCastPoint" "0" "AbilityCooldown" "0" "AbilityCastAnimation" "ACT_DOTA_ATTACK" "AbilityManaCost" "0" "MaxLevel" "1" }
+	"act_dota_defeat" { "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET" "BaseClass" "ability_datadriven" "AbilityTextureName" "rubick_empty1" "AbilityCastPoint" "0" "AbilityCooldown" "0" "AbilityCastAnimation" "ACT_DOTA_DEFEAT" "AbilityManaCost" "0" "MaxLevel" "1" }
+	"act_dota_cast_deafening_blast" { "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET" "BaseClass" "ability_datadriven" "AbilityTextureName" "rubick_empty1" "AbilityCastPoint" "0" "AbilityCooldown" "0" "AbilityCastAnimation" "ACT_DOTA_CAST_DEAFENING_BLAST" "AbilityManaCost" "0" "MaxLevel" "1" }
+	"act_dota_victory" { "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET" "BaseClass" "ability_datadriven" "AbilityTextureName" "rubick_empty1" "AbilityCastPoint" "0" "AbilityCooldown" "0" "AbilityCastAnimation" "ACT_DOTA_VICTORY" "AbilityManaCost" "0" "MaxLevel" "1" }
+
+	"become_oak"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_DISABLE | DOTA_ABILITY_BEHAVIOR_IGNORE_SILENCE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/become_oak"
+		"AbilityTextureName"			"furion_force_of_nature"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"duration"				"2.0"
+			"anim_duration"			"0.1"
+			"model_scale"			"100"
+			"ball_collision_dist"	"130"
+			"ball_handled_offset"	"130"
+			"ball_catch_height"		"180"
+		}
+
+	}
+
+	"resonant_pulse"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AOE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/resonant_pulse"
+		"AbilityTextureName"			"void_spirit_resonant_pulse"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		"AbilityCastPoint"				"0.0"
+
+		"precache"
+		{
+			"particle"		"particles/units/heroes/hero_void_spirit/pulse/void_spirit_pulse.vpcf"
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_void_spirit.vsndevts"
+		}
+
+		// Stats
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+		"AbilityCastRange"				"600"
+
+		"AbilityValues"
+		{
+			"radius"					"600"
+			"speed"						"2700"
+			"pull_force"				"900"
+			"ball_pull_force"			"1650"
+		}
+	}
+
+	"dissimilate"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/dissimilate"
+		"AbilityTextureName"			"void_spirit_dissimilate"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+
+		"precache"
+		{
+			"particle"		"particles/units/heroes/hero_void_spirit/dissimilate/void_spirit_dissimilate.vpcf"
+			"particle"		"particles/units/heroes/hero_void_spirit/dissimilate/void_spirit_dissimilate_dmg.vpcf"
+			"particle"		"particles/units/heroes/hero_void_spirit/dissimilate/void_spirit_dissimilate_exit.vpcf"
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_void_spirit.vsndevts"
+		}
+
+		// Stats
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"portals_per_ring"			"6"
+			"angle_per_ring_portal"		"60"
+			"first_ring_distance_offset" "450"
+			"outer_rings"				"1"
+			"phase_duration"			"1"
+			"damage_radius"				"275"
+			"cooldown"					"32"	// Дублируем сюда, чтобы читать из скрипта минуя WTF-модификатор
+		}
+	}
+
+	"dissimilate_exit"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/dissimilate_exit"
+		"AbilityTextureName"			"void_spirit/dissimilate_exit"
+		"MaxLevel"						"1"
+
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+	}
+
+	"shadow_step"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/shadow_step"
+		"AbilityTextureName"			"spectre_spectral_dagger"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+		"AbilityCastRange"				"1600"
+		
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+			"particle"		"particles/units/heroes/hero_spectre/spectre_shadow_path.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"speed"						"1400"
+			"width"						"100"
+			"range"						"1600"
+			"slow_pct"					"-30"
+			"slow_duration"				"2.0"
+			"trail_duration"			"3"
+			"trail_radius"				"120"
+		}
+	}
+
+
+	"spectre_passive"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_SILENCE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/spectre_passive"
+		"AbilityTextureName"			"spectre_haunt"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+			"particle"		"particles/units/heroes/hero_spectre/spectre_shadow_path.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"mana_restore"				"50"
+			"dash_range"				"200"
+		}
+	}
+
+	"primal_beast_onslaught_custom"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"AbilityChannelTime"			"0.6"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/primal_beast_onslaught"
+		"AbilityTextureName"			"primal_beast_onslaught"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+		"AbilityCastRange"				"1800"
+
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_primal_beast.vsndevts"
+			"particle"		"particles/units/heroes/hero_primal_beast/primal_beast_onslaught_hit.vpcf"
+			"particle"		"particles/units/heroes/hero_primal_beast/primal_beast_onslaught_range_finder.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"max_charge_time"			"0.6"
+			"max_run_distance"			"1800"
+			"charge_speed"				"2100"
+			"knockback_distance"		"1300"
+		}
+	}
+
+	"primal_beast_onslaught_release"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/primal_beast_onslaught"
+		"AbilityTextureName"			"primal_beast_onslaught_release"
+		"MaxLevel"						"1"
+	}
+
+	"primal_beast_passive"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_SILENCE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/primal_beast_passive"
+		"AbilityTextureName"			"primal_beast_uproar"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+	}
+
+	"ringmaster_souvenir_select"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/ringmaster_souvenir_select"
+		"AbilityTextureName"			"ringmaster_dark_carnival_souvenirs"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"0"
+	}
+
+	"ringmaster_force_staff"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/ringmaster_force_staff"
+		"AbilityTextureName"			"ringmaster_whoopee_cushion"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+		"AbilityCastRange"				"450"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+		"AbilityValues"
+		{
+			"force_staff_distance"			"450"
+		}
+	}
+
+	"ringmaster_box"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/ringmaster_box"
+		"AbilityTextureName"			"ringmaster_the_box"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+		"AbilityCastRange"				"900"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+		"AbilityValues"
+		{
+			"duration"					"1.5"
+		}
+	}
+
+	"ringmaster_unicycle"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/ringmaster_unicycle"
+		"AbilityTextureName"			"ringmaster_summon_unicycle"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"R"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+		"AbilityValues"
+		{
+			"duration"					"5.0"
+		}
+	}
+
+	"silencer_glaive_kick"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/silencer_glaive_kick"
+		"AbilityTextureName"			"silencer_glaives_of_wisdom"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"Q"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+		
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
+			"particle"		"particles/units/heroes/hero_silencer/silencer_glaives_of_wisdom.vpcf"
+			"particle"		"particles/units/heroes/hero_silencer/silencer_glaives_of_wisdom_explosion_flash.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"kickPower"					"1600"
+		}
+	}
+
+	"silencer_kick"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"abilities/silencer_kick"
+		"AbilityTextureName"			"silencer_kick"
+		"MaxLevel"						"1"
+		"HotKeyOverride"    			"W"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+		
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
+			"particle"		"particles/units/heroes/hero_silencer/silencer_curse.vpcf"
+			"particle"		"particles/generic_hero_status/status_silence.vpcf"
+		}
+
+		"AbilityValues"
+		{
+			"kickPower"					"1600"
+		}
+	}
+
+	// ============================================================
+	// Hoodwink abilities
+	// ============================================================
+
+	"hoodwink_acorn_decoy"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hoodwink_acorn_decoy"
+		"AbilityTextureName"			"hoodwink_scurry"
+		"MaxLevel"						"1"
+		"HotKeyOverride"				"Q"
+
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"duration"					"2.0"
+			"cast_range"				"1200"
+			"move_speed"				"450"
+		}
+	}
+
+	"hoodwink_scurry_shot"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hoodwink_scurry_shot"
+		"AbilityTextureName"			"hoodwink_acorn_shot"
+		"MaxLevel"						"1"
+		"HotKeyOverride"				"R"
+
+		"AbilityCastRange"				"2000"
+		"AbilityCastPoint"				"0.0"
+		"AbilityChannelTime"			"5.0"
+		"AbilityCooldown"				"32"
+		"AbilityManaCost"				"0"
+
+		"AbilityValues"
+		{
+			"max_channel_time"			"5.0"
+			"optimal_channel_time"		"3.0"
+			"min_push_force"			"100"
+			"max_push_force"			"2000"
+			"proj_speed"				"1400"
+			"proj_radius"				"100"
+		}
+	}
+
+	"hoodwink_scurry_shot_release"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"abilities/hoodwink_scurry_shot"
+		"AbilityTextureName"			"hoodwink_acorn_shot"
+		"MaxLevel"						"1"
+		"HotKeyOverride"				"R"
+
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+	}
+}
+

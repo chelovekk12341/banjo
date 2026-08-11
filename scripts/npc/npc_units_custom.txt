@@ -1,0 +1,436 @@
+// Dota Units File
+"DOTAUnits"
+{
+    "Version"    "1"
+
+    "referee"
+    {
+        // General
+        //
+        //"BaseClass"               "npc_dota_roshan"
+		"BaseClass"                 "npc_dota_creature"
+        "Model"                     "models\creeps\roshan\roshan.vmdl"
+        "SoundSet"                  "Roshan"
+        "ModelScale"                "1"
+        "MinimapIconSize"           "1"
+
+        // Abilities
+        //----------------------------------------------------------------
+		"Ability1"                  "referee_passive"
+        "Ability2"                  "roshan_slam_anim"
+        "Ability3"                  "banjoball_empty3"
+        "Ability4"                  "banjoball_empty4"
+        "Ability5"                  "banjoball_empty5"
+        "Ability6"                  "banjoball_empty6"
+        "Ability7"                  ""
+        "Ability8"                  ""
+		//"Ability1"					"roshan_spell_block"	
+		//"Ability2"					"roshan_teleport"			
+		//"Ability3"					"roshan_slam"			
+		//"Ability4"					"roshan_inherent_buffs"
+		//"Ability5"					"roshan_devotion"		
+		//"Ability6"					"roshan_bash"		
+		//"Ability7"					""						
+		//"Ability8"					""						
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"           "0"
+        "AttackDamageMax"           "0"
+        "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
+        "AttackRate"                "1"
+        "AttackRange"               "300"
+        "AttackAnimationPoint"      "0.3"
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                  "0"
+        "BountyGoldMin"             "0"
+        "BountyGoldMax"             "0"
+
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        "RingRadius"                "110"
+        "HealthBarOffset"           "0"
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"             "7000"
+        "MovementTurnRate"          "1.0"
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"              "7500"
+        "StatusHealthRegen"         "20"
+        "StatusMana"                "0"
+        "StatusManaRegen"           "0"
+
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                  "DOTA_TEAM_NEUTRALS"
+        
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"        "1400"
+        "VisionNighttimeRange"      "1400"
+
+        // Inventory
+        //----------------------------------------------------------------
+        "HasInventory"              "1"
+    }
+
+    "ball"
+    {
+        // General
+        "BaseClass"                 "npc_dota_creature"
+        "RingRadius"                 "30"
+
+        // Abilities
+        //----------------------------------------------------------------
+        "Ability1"                  "ball_passive"
+        "Ability2"                  ""
+        "Ability3"                  ""
+        "Ability4"                  ""
+
+        // Armor
+        //----------------------------------------------------------------
+        "ArmorPhysical"             "0"
+        "MagicalResistance"         "0"
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                  "0"
+        "BountyGoldMin"             "0"
+        "BountyGoldMax"             "0"
+
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_REGULAR"
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"              "100000"
+        "StatusHealthRegen"         "100000"
+        "StatusMana"                "0"
+        "StatusManaRegen"           "0"
+
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                  "DOTA_TEAM_NEUTRALS"
+
+        // Particle
+        //----------------------------------------------------------------
+        "DrawParticlesWhileHidden"  "1"
+    }
+
+    "dummy_no_invuln"
+    {
+        // General
+        "BaseClass"                 "npc_dota_creature"
+        "Model"                     "models/development/invisiblebox.vmdl"
+
+        // Abilities
+        //----------------------------------------------------------------
+        "Ability1"                  "dummy_no_invuln_passive"            
+        "Ability2"                  ""
+        "Ability3"                  ""
+        "Ability4"                  ""
+
+        // Armor
+        //----------------------------------------------------------------
+        "ArmorPhysical"             "0"
+        "MagicalResistance"         "0"
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                  "0"
+        "BountyGoldMin"             "100"
+        "BountyGoldMax"             "100"
+
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+        //"RingRadius"              "150"
+        //"HealthBarOffset"         "300"
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"             "280"
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"              "100"
+        "StatusHealthRegen"         "0"
+        "StatusMana"                "0"
+        "StatusManaRegen"           "0"
+
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                  "DOTA_TEAM_NEUTRALS"
+
+        // Particle
+        //----------------------------------------------------------------
+        "DrawParticlesWhileHidden"  "1" 
+    }
+
+    "global_dummy"
+    {
+        // General
+        "BaseClass"                 "npc_dota_creature"
+        "Model"                     "models/development/invisiblebox.vmdl"
+
+        // Abilities
+        //----------------------------------------------------------------
+        "Ability1"                  "global_dummy_passive"            
+        "Ability2"                  "rooted_passive"        
+        "Ability3"                  ""    
+        "Ability4"                  ""    
+        "Ability5"                  ""    
+        "Ability6"                  ""    
+        "Ability7"                  ""    
+        "Ability8"                  ""    
+
+        // Armor
+        //----------------------------------------------------------------
+        "ArmorPhysical"             "0"
+        "MagicalResistance"         "0"
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                  "0"
+        "BountyGoldMin"             "100"
+        "BountyGoldMax"             "100"
+
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"             "280"
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"              "100"
+        "StatusHealthRegen"         "0"
+        "StatusMana"                "0"
+        "StatusManaRegen"           "0"
+
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                  "DOTA_TEAM_NEUTRALS"
+
+        // Particle
+        //----------------------------------------------------------------
+        "DrawParticlesWhileHidden"  "1" 
+    }
+
+    "endround_dummy"
+    {
+        // General
+        //
+        "BaseClass"                 "npc_dota_creature"
+        "Model"                     "models/development/invisiblebox.vmdl"
+
+        // Abilities
+        //----------------------------------------------------------------
+        "Ability1"                  "dummy_passive"            
+        "Ability2"                  "endround_passive"        
+        "Ability3"                  ""    
+        "Ability4"                  ""    
+        "Ability5"                  ""    
+        "Ability6"                  ""    
+        "Ability7"                  ""    
+        "Ability8"                  ""    
+
+        // Armor
+        //----------------------------------------------------------------
+        "ArmorPhysical"             "0"
+        "MagicalResistance"         "0"
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                  "0"
+        "BountyGoldMin"             "100"
+        "BountyGoldMax"             "100"
+
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALL"
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"             "280"
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"              "100"
+        "StatusHealthRegen"         "0"
+        "StatusMana"                "0"
+        "StatusManaRegen"           "0"
+
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                  "DOTA_TEAM_NEUTRALS"
+
+        // Particle
+        //----------------------------------------------------------------
+        "DrawParticlesWhileHidden"  "1" 
+    }
+
+    "dummy"
+    {
+        // General
+        //
+        "BaseClass"                    "npc_dota_creature"    
+        "Model"                        "models/development/invisiblebox.vmdl"
+
+        // Abilities
+        //----------------------------------------------------------------
+        "Ability1"                    "dummy_passive"
+        "Ability2"                    ""
+        "Ability3"                    ""
+        "Ability4"                    ""
+        "Ability5"                    ""
+        "Ability6"                    ""
+        "Ability7"                    ""
+        "Ability8"                    ""
+
+        // Armor
+        //----------------------------------------------------------------
+        "ArmorPhysical"               "0"
+        "MagicalResistance"           "0"
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"          "DOTA_UNIT_CAP_NO_ATTACK"
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                    "0"
+        "BountyGoldMin"               "100"
+        "BountyGoldMax"               "100"
+
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"              "DOTA_HULL_SIZE_SMALL"
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"               "280"
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"                "100"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                    "DOTA_TEAM_NEUTRALS"
+
+        // Particle
+        //----------------------------------------------------------------
+        "DrawParticlesWhileHidden"    "1" 
+    }
+
+    "vision_dummy"
+    {
+        // General
+        "BaseClass"                   "npc_dota_creature"    
+        "Model"                       "models/development/invisiblebox.vmdl"
+
+        // Abilities
+        //----------------------------------------------------------------
+        "Ability1"                    ""
+        "Ability2"                    ""
+        "Ability3"                    ""
+        "Ability4"                    ""
+
+        // Armor
+        //----------------------------------------------------------------
+        "ArmorPhysical"               "0"
+        "MagicalResistance"           "0"
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"          "DOTA_UNIT_CAP_NO_ATTACK"
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                    "0"
+        "BountyGoldMin"               "100"
+        "BountyGoldMax"               "100"
+
+        // Bounds
+        //----------------------------------------------------------------
+        "BoundsHullName"              "DOTA_HULL_SIZE_SMALL"
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "MovementSpeed"               "280"
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"                "100"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                    "DOTA_TEAM_GOODGUYS"
+
+        "VisionDaytimeRange"          "1500"
+        "VisionNighttimeRange"        "1500"
+    }
+
+    "banjoball_void_spirit_remnant"
+    {
+        "BaseClass"                    "npc_dota_creature"    
+        "Model"                        "models/heroes/void_spirit/void_spirit.vmdl"
+        "ModelScale"                   "1.0"
+        "SoundSet"                     ""
+        
+        "AttackCapabilities"          "DOTA_UNIT_CAP_NO_ATTACK"
+        "MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+        "BoundsHullName"              "DOTA_HULL_SIZE_REGULAR"
+        
+        "StatusHealth"                "100"
+        "StatusHealthRegen"           "0"
+        "StatusMana"                  "0"
+        "StatusManaRegen"             "0"
+        
+        "TeamName"                    "DOTA_TEAM_NEUTRALS"
+        "HasInventory"                "0"
+    }
+}

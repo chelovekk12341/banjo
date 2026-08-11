@@ -1,0 +1,490 @@
+﻿"lang"
+{
+	"Language"																	"English"
+	"Tokens"
+	{
+		"Banjoball_Ping_Ready"													"Ready"
+		"Banjoball_Ping_Cooldown"												"On Cooldown (%s1s remain)"
+		"Banjoball_Ping_NoMana"													"Not Enough Mana (needs %s1)"
+		"Banjoball_Ping_NotLearned"												"Not Learned"
+
+		//******************** GENERAL ABILITIES ********************
+		"DOTA_Tooltip_ability_kick_ball"										"Kick"
+		"DOTA_Tooltip_ability_kick_ball_Description"							"Kicks the ball in the clicked direction. <br><font color=\"#FF4BD6\"> To perform a back heel kick, use the ability on the hero's model. </font> <br><br><font color=\"#FF3333\"> There is a LIMITED amount of time for holding the ball inside or nearby a goal area! <br><br> These actions refresh the goalkeeper timer: <ul> <li> Holding the ball outside of a goal area for <b>3 seconds</b>; <li> Ball travelling far enough away from a goal area; <li> The opponent touching the ball. </ul> </font> <br><br><font color=\"#FF4BD6\"> If the hero's possessing the ball, there'll be a notification of a green emoji when the timer resets. </font>"
+		"DOTA_Tooltip_ability_kick_ball_kickPower"								"KICK FORCE:"
+		"DOTA_Tooltip_ability_kick_ball_ballKeepingTimeInside"					"SECONDS INSIDE:"
+		"DOTA_Tooltip_ability_kick_ball_ballKeepingTimeNearby"					"SECONDS NEARBY:"
+
+		"DOTA_Tooltip_ability_surge"											"Sprint"
+		"DOTA_Tooltip_ability_surge_Description"								"Gradually accelerates the hero, draining mana in the process. <br> After the ability is canceled, the hero starts slowing down progressively. <br><br><font color=\"#FF4BD6\"> The faster the hero runs, the more mana per second is needed. <br> The hero gradually loses the ball slowness debuff when sprinting. <br><br> If the hero is a goalkeeper or possess the ball, then their acceleration and mana drain are increased. </font> <br><br><font color=\"#FF3333\"> Possessing the ball slows the hero down by 25% if the hero isn't sprinting. <br><br> If a hero possess the ball, then others are unable to take it by the back of their hero's models. </font>"
+		"DOTA_Tooltip_ability_surge_manaDrainMax"								"%MAX MANA/SEC:"
+		"DOTA_Tooltip_ability_surge_manaDrainMin"								"%MIN MANA/SEC:"
+		"DOTA_Tooltip_ability_surge_manaRecovery"								"%MANA REGEN/SEC:"
+		"DOTA_Tooltip_ability_surge_maximalMS"									"MAXIMAL MOVESPEED:"
+		"DOTA_Tooltip_ability_surge_baselMS"									"BASE MOVESPEED:"
+
+		"DOTA_Tooltip_ability_cross"											"Cross"
+		"DOTA_Tooltip_ability_cross_Description"								"Kicks the ball into the air in front of the hero after spending some time channeling. <br> The repetitive usage while channeling makes the hero kick the ball earlier. <br><br><font color=\"#FF4BD6\"> The more time is spent channeling, the stronger it kicks. <br><br> Casting the ability on the hero's model sends the ball into the air straight above the hero. </font>"
+		"DOTA_Tooltip_ability_cross_channelTime"								"MAXIMAL CHANNEL TIME:"
+		"DOTA_Tooltip_ability_cross_minVel"										"MINIMAL KICK FORCE:"
+		"DOTA_Tooltip_ability_cross_maxVel"										"MAXIMAL KICK FORCE:"
+		"DOTA_Tooltip_ability_glyph"											"Glyph"
+		"DOTA_Tooltip_ability_glyph_Description"								"Makes the ball unable to be stolen from the hero for %duration% seconds."
+		"DOTA_Tooltip_ability_glyph_duration"									"DURATION:"
+
+		"DOTA_Tooltip_ability_jump"												"Jump"
+		"DOTA_Tooltip_ability_jump_Description"									"Throws the hero into the air while making the hero taller for a moment. <br><br><font color=\"#FF4BD6\"> Jumps a little bit higher in the goal area. <br><br><font color=\"#FF3333\"> Can't be cast while possessing the ball. <br><br> The hero won't catch the ball in the air if it is kicked by an opponent (excluding goalkeepers). </font>"
+		"DOTA_Tooltip_ability_jump_tallDur"										"HEIGHT BUFF DURATION:"
+
+		//******************** HERO ABILITIES ********************
+		//Anti-Mage--------------------------
+		"DOTA_Tooltip_ability_super_sprint"										"Super Sprint"
+		"DOTA_Tooltip_ability_super_sprint_Description"							"Propels the hero forward, draining mana in the process. <br><br><font color=\"#FF4BD6\"> When Anti-Mage steals the ball, he steals mana from the opponent.</font> <br><br><font color=\"#FF3333\"> The ability is canceled and can't be cast while ROOTED. </font>"
+		"DOTA_Tooltip_ability_super_sprint_mana_recovery_rate"					"%MANA REGEN/SEC:"
+		"DOTA_Tooltip_ability_super_sprint_mana_drain_rate"						"%MANA DRAIN/SEC:"
+		"DOTA_Tooltip_ability_super_sprint_initialMana"							"%INITIAL MANA COST:"
+		"DOTA_Tooltip_ability_super_sprint_manaSteal"							"%MANA STEAL:"
+
+		"DOTA_Tooltip_Facet_antimage_magebanes_mirror"							"Magebane's Mirror"
+		"DOTA_Tooltip_Facet_antimage_magebanes_mirror_Description"				"Very cool."
+		"DOTA_Tooltip_ability_testchange"										"Cool Buff"
+		"DOTA_Tooltip_ability_testchange_Description"							"Do not look, yo"
+
+		//Bloodseeker--------------------------
+		"DOTA_Tooltip_ability_chase"											"Chase"
+		"DOTA_Tooltip_ability_chase_Description"								"The hero makes a dash forward. <br><br><font color=\"#FF4BD6\"> Direction can be controlled, but the ability cannot be stopped. <br><br> The hero slows down enemies around himself. </font> <br><br><font color=\"#FF3333\"> Bloodseeker stops running if he hits another hero or a wall. <br><br> It doesn't slow down goalkeepers. </font>"
+		"DOTA_Tooltip_ability_chase_duration"									"DURATION:"
+		"DOTA_Tooltip_ability_chase_slowDur"									"SLOW DURATION:"
+
+		//Earthshaker--------------------------
+		"DOTA_Tooltip_ability_slam"												"Slam"
+		"DOTA_Tooltip_ability_slam_Description"									"Slams the ground, knocking everyone nearby away. <br><br><font color=\"#FF4BD6\"> Kicks the ball with great force in the direction the hero is facing. </font> <br><br><font color=\"#FF3333\"> Ability doesn't affect units in the air. </font>"
+		"DOTA_Tooltip_ability_slam_delay"										"DELAY BEFORE SLAM:"
+
+		//Enchantress--------------------------
+		"DOTA_Tooltip_ability_cmiuc"											"Catch Me If You Can"
+		"DOTA_Tooltip_ability_cmiuc_Description"								"Applies a debuff that slows the ball either until the duration is over or an ally takes the ball. <br><br><font color=\"#FF3333\"> Does nothing: <ul> <li> when an ALLY POSSESS THE BALL; <li> when THE BALL IS OUT OF RANGE. </ul></font>"
+		"DOTA_Tooltip_ability_cmiuc_duration"									"SLOW DURATION:"
+		"DOTA_Tooltip_ability_cmiuc_slowPerSec"									"%SLOW PER SECOND:"
+
+		"DOTA_Tooltip_ability_ricoshot"											"Ricochet"
+		"DOTA_Tooltip_ability_ricoshot_Description"								"Applies a ricochet buff to the ball. The ball will bounce off enemy heroes in the opposite direction instead of being intercepted. <br>Each bounce increases the ball's velocity by %bounce_add_vel%%% and extends the buff duration by 1s. <br><br><font color=\"#FF3333\">Limitations: <ul> <li> Goalkeeper catch: enemy goalkeepers ignore the ricochet and catch the ball; <li> Does not work if the opponent already possess the ball; <li> Ends immediately when the ball stops. </ul> </font>"
+		"DOTA_Tooltip_ability_ricoshot_duration"								"BUFF DURATION:"
+		"DOTA_Tooltip_ability_ricoshot_bounces_max"								"MAX BOUNCES:"
+		"DOTA_Tooltip_ability_ricoshot_bounce_add_vel"							"VELOCITY GAIN PER BOUNCE:"
+
+		//Void Spirit------------------------
+		"DOTA_Tooltip_ability_dissimilate_exit"									"Exit"
+		"DOTA_Tooltip_ability_dissimilate_exit_Description"						"Instantly exit from Dissimilate circles at the selected location."
+
+		//Invoker--------------------------
+		"DOTA_Tooltip_ability_powerdash"										"Powerdash"
+		"DOTA_Tooltip_ability_powerdash_Description"							"Makes a short dash in the clicked direction. <br><br><font color=\"#FF4BD6\"> Doesn't let the hero travel deep behind a goal line. </font>"
+		"DOTA_Tooltip_ability_powerdash_duration"								"DURATION:"
+
+		"DOTA_Tooltip_ability_powershot"										"Powershot"
+		"DOTA_Tooltip_ability_powershot_Description"							"Causes the ball to travel with zero friction and a high velocity across the field. When the ability ends, the effect vanishes gradually. <br><br><font color=\"#FF4BD6\"> When a hero receives the ball, all the ball's inertia is transferred to the hero. </font>"
+		"DOTA_Tooltip_ability_powershot_channel_time"							"CHANNEL TIME:"
+		"DOTA_Tooltip_ability_powershot_duration"								"DURATION:"
+		"DOTA_Tooltip_ability_powershot_velocity"								"KICK FORCE:"
+
+		//Juggernaut--------------------------
+		"DOTA_Tooltip_ability_omnislash"										"Omnislash"
+		"DOTA_Tooltip_ability_omnislash_Description"							"Teleports the hero several times in the direction Juggernaut looks. <br> The ability may be canceled after the first blink by casting it again. <br><br><font color=\"#FF4BD6\"> Teleporting delay is shorter if the hero possess the ball. </font>"
+
+		"DOTA_Tooltip_ability_omnislash_delay"									"TELEPORTING DELAY:"
+		"DOTA_Tooltip_ability_omnislash_delayBall"								"TELEPORTING DELAY (BALL):"
+		"DOTA_Tooltip_ability_omnislash_amount_dashes"							"DASH AMOUNT:"
+
+		//Lina--------------------------
+		"DOTA_Tooltip_ability_pull"												"Pull"
+		"DOTA_Tooltip_ability_pull_Description"									"Drags Lina towards the ball. <br><br><font color=\"#FF4BD6\"> Cooldown depends on how long the Pull was active. <br><br> Can't be cast while possessing the ball. </font>"
+		"DOTA_Tooltip_ability_pull_maximalDuration"								"MAXIMAL DURATION:"
+		"DOTA_Tooltip_ability_pull_pullPower"									"PULL ACCELERATION:"
+		"DOTA_Tooltip_ability_pull_cooldownMin"									"MINIMAL COOLDOWN:"
+		"DOTA_Tooltip_ability_pull_cooldownMax"									"MAXIMAL COOLDOWN:"
+
+		"DOTA_Tooltip_ability_pull_toggle"										"Fiery Acceleration"
+		"DOTA_Tooltip_ability_pull_toggle_Description"							"Accelerates the PULL force for a short period of time."
+		"DOTA_Tooltip_ability_pull_toggle_mult"									"PULL ACCELERATION MULTIPLIER:"
+		"DOTA_Tooltip_ability_pull_toggle_duration"								"PULL ACCELERATION DURATION:"
+
+		//Magnus--------------------------
+		"DOTA_Tooltip_ability_skewer"											"Skewer"
+		"DOTA_Tooltip_ability_skewer_Description"								"Rushes forward in the clicked direction, pushing nearby heroes far away. <br><br><font color=\"#FF4BD6\"> Ability cannot be used right after usage of HORN TOSS. </font>"
+
+		"DOTA_Tooltip_ability_horn_toss"										"Horn Toss"
+		"DOTA_Tooltip_ability_horn_toss_Description"							"Tosses heroes and the ball, launching them to the rear of Magnus."
+
+		//Night Stalker--------------------------
+		"DOTA_Tooltip_ability_demonic_endurance_sprint"							"Demonic Endurance"
+		"DOTA_Tooltip_ability_demonic_endurance_sprint_Description"				"Accelerates the hero on use, and removes the ball slowness debuff. <br><br><font color=\"#FF4BD6\"> The hero base speed is faster than the default one. <br><br> Possessing the ball slows the hero down for 20%. </font> <br><br><font color=\"#FF3333\"> CANNOT BE CAST without the ball. </font color>"
+		"DOTA_Tooltip_ability_demonic_endurance_sprint_mana_drain_rate"			"%MANA DRAIN/SEC:"
+		"DOTA_Tooltip_ability_demonic_endurance_sprint_mana_recovery_rate"		"%MANA REGEN/SEC:"
+		"DOTA_Tooltip_ability_demonic_endurance_bonus"							"SPEED BONUS:"
+
+		"DOTA_Tooltip_ability_empowered_kick"									"Empowered Kick"
+		"DOTA_Tooltip_ability_empowered_kick_Description"						"Kicks the ball with more force while hiding it into the shadows."
+		"DOTA_Tooltip_ability_empowered_kick_kickPower"							"KICK POWER:"
+		"DOTA_Tooltip_ability_empowered_kick_hideDur"							"SHADOW DURATION:"
+
+		"DOTA_Tooltip_ability_feint"											"Feint"
+		"DOTA_Tooltip_ability_feint_Description"								"Makes a sudden move, immediately turning your hero in the direction you clicked."
+
+		//Ogre-Magi--------------------------
+		"DOTA_Tooltip_ability_ogre_smash"										"Ogre Smash!"
+		"DOTA_Tooltip_ability_ogre_smash_Description"							"Throws everyone in front of him away. <br><br><font color=\"#FF4BD6\"> Smashing force for the ball depends on how far the hero is from the enemy's goal area. <br> <b>THE FURTHER IT IS, THE STRONGER IT KICKS.</b> </font> <br><br><font color=\"#FF3333\"> Ability doesn't affect units in the air. </font>"
+		"DOTA_Tooltip_ability_ogre_smash_delay"									"DELAY:"
+
+		//Abaddon--------------------------
+		"DOTA_Tooltip_ability_mist_coil"										"Mist Coil"
+		"DOTA_Tooltip_ability_mist_coil_Description"							"Transfers 70 mana to all allied heroes within a 900 radius, consuming 70 of Abaddon's mana. <br><br> If Borrow Time is active, Abaddon restores 70 mana instead of spending it."
+		"DOTA_Tooltip_ability_mist_coil_mana_transfer"							"MANA TRANSFERRED:"
+
+		"DOTA_Tooltip_ability_borrow_time"										"Borrow Time"
+		"DOTA_Tooltip_ability_borrow_time_Description"							"For 3 seconds, all mana costs and mana draining effects (like Sprint) restore Abaddon's mana instead of consuming it. <br><br> Upon activation, automatically activates sprint if it was off, and instantly resets Mist Coil's cooldown."
+		"DOTA_Tooltip_ability_borrow_time_duration"								"DURATION:"
+
+		"cant_pull_goalkeeper"													"Cannot pull the goalkeeper"
+
+		//Puck--------------------------
+		"DOTA_Tooltip_ability_swap"												"Swap"
+		"DOTA_Tooltip_ability_swap_Description"									"Throws a sphere that swaps the position and velocity of the hit character with yours. If the sphere hits no one, it teleports you to the location where the sphere disappeared."
+		"DOTA_Tooltip_ability_swap_duration"									"DURATION:"
+
+		//Pudge--------------------------
+		"DOTA_Tooltip_ability_hook"												"Hook"
+		"DOTA_Tooltip_ability_hook_Description"									"Launches a hook that, upon collision with a hero or the ball, drags the unit to the caster. <br><br><font color=\"#FF4BD6\"> Enemies are silenced while hooked. <br><br>Pressing again cancels the ability.</font> <br><br><font color=\"#FF3333\"> Doesn't hook the ball inside a goal area. </font>"
+		"DOTA_Tooltip_ability_hook_delay"										"DELAY:"
+
+		"DOTA_Tooltip_ability_hook_toggle"										"Hook the Ball"
+		"DOTA_Tooltip_ability_hook_toggle_Description"							"Makes hook affect only the ball."
+
+		//Queen of Pain--------------------------
+		"DOTA_Tooltip_ability_blink"											"Blink"
+		"DOTA_Tooltip_ability_blink_Description"								"Teleports the hero forward after a brief delay. <br><br><font color=\"#FF4BD6\"> After the teleportation, the hero has some time to teleport back. <br><br> If you catch the ball and hold it until the backtrack indicator expires, the cooldown is reduced. </font>"
+		"DOTA_Tooltip_ability_blink_distance"									"DISTANCE:"
+		"DOTA_Tooltip_ability_blink_delay"										"DELAY:"
+		"DOTA_Tooltip_ability_blink_timeToUseBacktrack"							"TIME TO USE BACKTRACK:"
+		"DOTA_Tooltip_ability_blink_shortCD"									"SHORT COOLDOWN:"
+
+		//Shadow Fiend--------------------------
+		"DOTA_Tooltip_ability_goalspeed"										"Goal Mastery"
+		"DOTA_Tooltip_ability_goalspeed_Description"							"Makes Shadow Fiend faster and increases his kick force with each goal scored by allies. <br> Slows Shadow Fiend down with each goal scored by enemies. <br><br><font color=\"#FF4BD6\"> Starts with 1 stack.<br>Amount of mana depicts you current number of stacks. <br><br> Possessing the ball DOESN'T slows the hero down. </font>"
+		"DOTA_Tooltip_ability_goalspeed_speedbuff"								"SPEED PER GOAL:"
+		"DOTA_Tooltip_ability_goalspeed_kickbuff"								"KICK POWER PER GOAL:"
+		"DOTA_Tooltip_ability_goalspeed_maxstacks"								"MAXIMUM STACKS:"
+		"DOTA_Tooltip_ability_goalspeed_minstacks"								"MINIMUM STACKS:"
+
+		"DOTA_Tooltip_ability_shadowraze2"										"Short Raze"
+		"DOTA_Tooltip_ability_shadowraze2_Description"							"Roots enemies in the shadowraze zone after a short delay. <br><br> If SF ensnares an enemy, he gets a movespeed buff for the duration of the SHADOWRAZE; it accelerates the hero to a maximal movespeed of 700 on every amount of GOAL MASTERY stacks."
+		"DOTA_Tooltip_ability_shadowraze2_duration"								"DURATION:"
+		"DOTA_Tooltip_ability_shadowraze2_delay"								"DELAY:"
+
+		"DOTA_Tooltip_ability_shadowraze"										"Far Raze"
+		"DOTA_Tooltip_ability_shadowraze_Description"							"Roots enemies in the shadowraze zone after a short delay. <br><br> If SF ensnares an enemy, he gets a movespeed buff for the duration of the SHADOWRAZE; it accelerates the hero to a maximal movespeed of 700 on every stack of goals."
+		"DOTA_Tooltip_ability_shadowraze_duration"								"DURATION:"
+		"DOTA_Tooltip_ability_shadowraze_delay"									"DELAY:"
+
+		//Slark--------------------------
+		"DOTA_Tooltip_ability_backflip"											"Backflip"
+		"DOTA_Tooltip_ability_backflip_Description"								"Jumps forward into the air. <br><br><font color=\"#FF4BD6\"> NOTE: The ball has lower friction in the air, so all the kicks are stronger.</font>"
+
+		"DOTA_Tooltip_ability_ninja_invis"										"Ninja Walk"
+		"DOTA_Tooltip_ability_ninja_invis_Description"							"Makes the Slark invisible, spending mana at the same time. <br><br><font color=\"#FF333\"> It is interrupted if a FLIP or SPRINT is used. </font>"
+		"DOTA_Tooltip_ability_ninja_invis_fadeDelay"							"FADE DELAY:"
+		"DOTA_Tooltip_ability_ninja_invis_manaDrain"							"%MANA DRAIN/SEC:"
+
+		//Storm Spirit--------------------------
+		"DOTA_Tooltip_ability_ball_lightning"									"Ball Lightning"
+		"DOTA_Tooltip_ability_ball_lightning_Description"						"Transforms into a ball of energy and dashes forward. <br><br><font color=\"#FF3333\"> Ends cast upon receiving the ball. <br> And cannot be used with the ball. <br><br> The less mana the hero has, the bigger his base movespeed is. </font>"
+		"DOTA_Tooltip_ability_ball_lightning_initialManaDrain"					"%INITIAL MANA DRAIN:"
+		"DOTA_Tooltip_ability_ball_lightning_ManaDrainRate"						"%MANA DRAIN/SEC:"
+		"DOTA_Tooltip_ability_ball_lightning_manaRecoveryRate"					"%MANA REGEN/SEC:"
+		"DOTA_Tooltip_ability_ball_lightning_msbonus		"							"MAX SPEED BONUS:"
+
+		"DOTA_Tooltip_ability_curveshot_left"									"Curveshot (CW)"
+		"DOTA_Tooltip_ability_curveshot_left_Description"						"Kicks the ball while causing it to curve clockwise. <br><br><font color=\"#FF4BD6\"> Recovers mana of heroes on receiving a curveshot. <br><br> Applies a buff of increased mana regeneration to Storm Spirit after a pass to a teammate.</font> <br><br><font color=\"#FF3333\"> If an enemy receives Curveshot, they takes mana and removes Storms whole mana pool. </font>"
+		"DOTA_Tooltip_ability_curveshot_left_manaInitial"						"%MANA REGEN (INITIAL):"
+		"DOTA_Tooltip_ability_curveshot_left_manaBuff"							"%MANA REGEN BUFF PER SEC (SELF):"
+
+		"DOTA_Tooltip_ability_curveshot_right"									"Curveshot (CCW)"
+		"DOTA_Tooltip_ability_curveshot_right_Description"						"Kicks the ball, causing it to deflect counterclockwise. <br><br><font color=\"#FF4BD6\"> Recovers mana of heroes on receiving a curveshot. <br><br> Applies a buff of increased mana regeneration to Storm Spirit after a pass to a teammate.</font> <br><br><font color=\"#FF3333\"> If an enemy receives Curveshot, they takes mana and removes Storms whole mana pool. </font>"
+		"DOTA_Tooltip_ability_curveshot_right_manaInitial"						"%MANA REGEN (INITIAL):"
+		"DOTA_Tooltip_ability_curveshot_right_manaBuff"							"%MANA REGEN BUFF PER SEC (SELF):"
+
+		//Techies--------------------------
+		"DOTA_Tooltip_ability_remote_mine"										"Remote Mine"
+		"DOTA_Tooltip_ability_remote_mine_Description"							"Toss a remote mine towards target location. When pressed again, a mine explodes, giving inertia to all the characters and the ball. <br><br><font color=\"#FF4BD6\"> Attention, on expiration of the bomb life-span time, the mine will explode on its own. <br><br> Smashing force for the ball depends on how far the hero is from the enemy's goal area. <br> <b>THE FURTHER IT IS, THE STRONGER IT KICKS.</b>"
+		"DOTA_Tooltip_ability_remote_mine_radius"								"DETONATION RADIUS:"
+		"DOTA_Tooltip_ability_remote_mine_duration"								"REMOTE MINE LIFE-SPAN:"
+
+		"DOTA_Tooltip_ability_remote_mine_detonate"								"Detonate Remote Mine"
+		"DOTA_Tooltip_ability_remote_mine_detonate_Description"					"Detonate the remote mine."
+
+		//Terrorblade--------------------------
+		"DOTA_Tooltip_ability_sunder"											"Sunder"
+		"DOTA_Tooltip_ability_sunder_Description"								"Swaps the inertia of all targets caught in the AoE (including the ball) with Terrorblade's one."
+
+		"DOTA_Tooltip_ability_metamorphosis"									"Metamorphosis"
+		"DOTA_Tooltip_ability_metamorphosis_Description"						"Transforms the hero to a demon if he steps inside a goal area. <br><br> Which brings the folowing benefits: <ul> <li> Increased kicking force; </li> <li> SUNDER removes inertia from all targets instead of swapping it (affects the ball); </li> <li> SUNDER stays on the ground for some time and doesn't dissapear immediately. </li> </ul> <br><br><font color=\"#FF4BD6\"> SUNDER swaps inertia in goal only if Terrorblade is the last player who kicked the ball. </font>"
+		"DOTA_Tooltip_ability_metamorphosis_sunderDur"							"SUNDER DURATION:"
+		"DOTA_Tooltip_ability_metamorphosis_stun"								"STUN ON ENTERING:"
+
+		//Weaver--------------------------
+		"DOTA_Tooltip_ability_time_lapse"										"Time Lapse"
+		"DOTA_Tooltip_ability_time_lapse_Description"							"Warp backward in time to your position 5 seconds ago, regaining your previous inertia from that time. <br><br><font color=\"#FF4BD6\"> Objects near the previous position get knocked away from the caster. </font>"
+		"DOTA_Tooltip_ability_time_lapse_time"									"LAPSED TIME:"
+		"DOTA_Tooltip_ability_time_lapse_radius"								"IMPACT RADIUS:"
+
+		"DOTA_Tooltip_ability_shukuchi_sprint"									"Shukuchi"
+		"DOTA_Tooltip_ability_shukuchi_sprint_Description"						"Shift out of visibility during your sprint, draining mana in the process. <br><br><font color=\"#FF4BD6\"> Breaks if Time Lapse is used. <br><br>Possessing the ball slows the hero down for 20%.</font>"
+		"DOTA_Tooltip_ability_shukuchi_sprint_mana_drain_rate"					"%MANA DRAIN/SEC:"
+		"DOTA_Tooltip_ability_shukuchi_sprint_mana_recovery_rate"				"%MANA REGEN/SEC:"
+		"DOTA_Tooltip_ability_shukuchi_sprint_maximalMS"						"MAXIMAL MOVESPEED:"
+		"DOTA_Tooltip_ability_shukuchi_sprint_fade_delay"						"DELAY:"
+
+		//CLOCKWERK
+		"DOTA_Tooltip_ability_hookshot"											"Hookshot"
+		"DOTA_Tooltip_ability_hookshot_Description"								"Throws a hook at a large range. If hook hits a unit, the caster is pulled to it, rooting the target (if enemy). If caster has the ball, it remains at the initial point. Caster cannot pick up the ball during attraction."
+
+		"DOTA_Tooltip_ability_clockcog"											"Powercog"
+		"DOTA_Tooltip_ability_clockcog_Description"								"Create a powercog after a short delay, which stays for 8 seconds (or until new one is created). Cog is an obstacle (you can't pass through) and repels enemies. If placed inside allied gates, disappears in 5 seconds. Does not affect goalkeepers."
+		"DOTA_Tooltip_ability_clockcog_cog_duration"							"COG DURATION:"
+
+		//ARC WARDEN
+		"DOTA_Tooltip_ability_tempest_double"									"Tempest Double"
+		"DOTA_Tooltip_ability_tempest_double_Description"						"Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical clone of itself, with identical abilities."
+		"DOTA_Tooltip_ability_tempest_double_duration"							"TEMPEST DURATION:"
+
+		"DOTA_Tooltip_ability_magnetic_field"									"Magnetic Field"
+		"DOTA_Tooltip_ability_magnetic_field_Description"						"Generates a circular distortion field of magnetic energy that speeds up or slows down the ball depending on whether a teammate or enemy kicked it last. If the fields overlap, only one field will have an effect on the ball."
+		"DOTA_Tooltip_ability_magnetic_field_duration"							"FIELD DURATION:"
+
+		//Enigma--------------------------
+		"DOTA_Tooltip_ability_black_hole"										"Black Hole"
+		"DOTA_Tooltip_ability_black_hole_Description"							"Channeling. Pulls all heroes and the ball to the center of the black hole. Upon completion, all pulled targets are knocked away from the center. Does not affect goalkeepers."
+		"DOTA_Tooltip_ability_black_hole_radius"								"RADIUS:"
+		"DOTA_Tooltip_ability_black_hole_channel_time"							"CHANNEL TIME:"
+		"DOTA_Tooltip_ability_black_hole_stop"									"Cancel Black Hole"
+
+		"DOTA_Tooltip_ability_microblink"										"Microblink"
+		"DOTA_Tooltip_ability_microblink_Description"							"Teleports the hero for a short distance."
+		"DOTA_Tooltip_ability_microblink_blink_range"							"BLINK RANGE:"
+
+		//Furion--------------------------
+		"DOTA_Tooltip_ability_furion_sprout"									"Sprout"
+		"DOTA_Tooltip_ability_furion_sprout_Description"						"Creates a ring of trees around the target point.<br><br>Heroes and the ball outside of the ring will be pushed away.<br><br>The ball can still pass through the trees.<br><br><font color=\"#ff3333\">Cannot cast inside the goal area.</font>"
+		"DOTA_Tooltip_ability_furion_sprout_duration"							"DURATION:"
+		"DOTA_Tooltip_ability_furion_sprout_hero_push_force"					"HERO PUSH FORCE:"
+		"DOTA_Tooltip_ability_furion_sprout_ball_push_force"					"BALL PUSH FORCE:"
+
+		"DOTA_Tooltip_ability_become_oak"										"Become Oak"
+		"DOTA_Tooltip_ability_become_oak_Description"							"Increases the model scale, as well as the ball catch radius and ball keeping offset."
+		"DOTA_Tooltip_ability_become_oak_duration"								"DURATION:"
+		"DOTA_Tooltip_ability_become_oak_anim_duration"							"TRANSFORM TIME:"
+		"DOTA_Tooltip_ability_become_oak_model_scale"							"%MODEL SCALE INCREASE:"
+		//"DOTA_Tooltip_ability_become_oak_ball_collision_dist"				"BALL CATCH RADIUS:"
+		//"DOTA_Tooltip_ability_become_oak_ball_handled_offset"				"BALL KEEPING OFFSET:"
+		//"DOTA_Tooltip_ability_become_oak_ball_catch_height"					"BALL CATCH HEIGHT:"
+
+		//Tusk--------------------------
+		"DOTA_Tooltip_ability_ice_snows"										"Ice Shards"
+		"DOTA_Tooltip_ability_ice_snows_Description"							"Creates a closed oval (capsule) barrier of ice shards around the caster and the target enemy, blocking both heroes and the ball, trapping them inside."
+		"DOTA_Tooltip_ability_ice_snows_duration"								"BARRIER DURATION:"
+
+		"DOTA_Tooltip_ability_drinking_buddies"									"Drinking Buddies"
+		"DOTA_Tooltip_ability_drinking_buddies_Description"						"Tusk rolls to a friendly hero. Flight passes through any obstacles."
+		"DOTA_Tooltip_ability_drinking_buddies_duration"						"ROLL DURATION:"
+
+		"DOTA_Tooltip_ability_tusk_curve_kick"									"Walrus Kick"
+		"DOTA_Tooltip_ability_tusk_curve_kick_Description"						"Hard kicks the ball turning around, making it fly along a curve.<br><br> Curve direction is determined by mouse position relative to the hero's look direction at the moment of kick.<br><br>If the click is made to the <font color=\"#FF4BD6\">left</font> of Tusk's line of sight, the ball will curve to the <font color=\"#FF4BD6\">right</font> and vice versa."
+
+		//Void Spirit--------------------------
+		"DOTA_Tooltip_ability_resonant_pulse"									"Resonant Pulse"
+		"DOTA_Tooltip_ability_resonant_pulse_Description"						"Releases an expanding ring of energy that knocks back enemy heroes and pulls the ball."
+		"DOTA_Tooltip_ability_resonant_pulse_radius"							"RADIUS:"
+		"DOTA_Tooltip_ability_resonant_pulse_speed"								"WAVE SPEED:"
+		"DOTA_Tooltip_ability_resonant_pulse_pull_force"						"KNOCKBACK FORCE:"
+		"DOTA_Tooltip_ability_resonant_pulse_ball_pull_force"					"BALL PULL FORCE:"
+
+		"DOTA_Tooltip_ability_dissimilate"										"Dissimilate"
+		"DOTA_Tooltip_ability_dissimilate_Description"							"The hero temporarily fades out of the world, hiding himself and the ball. After 1 second, he reappears at the center of the selected portal. Can exit prematurely."
+		"DOTA_Tooltip_ability_dissimilate_phase_duration"						"DISAPPEARANCE TIME:"
+
+		//Spectre--------------------------
+		"DOTA_Tooltip_ability_shadow_step"										"Spectral Dagger"
+		"DOTA_Tooltip_ability_shadow_step_Description"							"Fires a dagger in the targeted direction, leaving a shadow trail and applying root to the first enemy hero hit for 1.5 seconds. Enemies standing on the trail are also rooted for 1.5 seconds. Instantly teleports Spectre to any enemy affected by the trail or dagger. <br><br><font color=\"#FF3333\">Dagger and trail completely ignore the goalie.</font>"
+		"DOTA_Tooltip_ability_shadow_step_speed"								"DAGGER SPEED:"
+		"DOTA_Tooltip_ability_shadow_step_width"								"DAGGER WIDTH:"
+		"DOTA_Tooltip_ability_shadow_step_range"								"DAGGER RANGE:"
+		"DOTA_Tooltip_ability_shadow_step_trail_duration"						"TRAIL DURATION:"
+
+		"DOTA_Tooltip_ability_spectre_passive"									"Spectral Body"
+		"DOTA_Tooltip_ability_spectre_passive_Description"						"TOGGLEABLE. <br><br>When enabled, Spectre can freely walk through other heroes. Upon capturing the ball, she automatically dashes %dash_range% units forward.<br><br>Stealing the ball from an opponent restores %mana_restore% mana to Spectre."
+		"DOTA_Tooltip_ability_spectre_passive_mana_restore"						"MANA RESTORED:"
+		"DOTA_Tooltip_ability_spectre_passive_dash_range"						"DASH RANGE:"
+
+		//Primal Beast---------------------
+		"npc_dota_hero_primal_beast"											"Primal Beast"
+		"DOTA_Tooltip_ability_primal_beast_onslaught_custom"					"Onslaught"
+		"DOTA_Tooltip_ability_primal_beast_onslaught_custom_Description"		"Charges a run in the selected direction for up to 0.6 seconds. Upon reactivating or when the charge time expires, rushes forward with high speed, knocking back enemies and continuously pushes the ball in front of them."
+		"DOTA_Tooltip_ability_primal_beast_onslaught_release"					"Release Onslaught"
+
+		"DOTA_Tooltip_ability_primal_beast_passive"								"Heavy Steps"
+		"DOTA_Tooltip_ability_primal_beast_passive_Description"					"TOGGLEABLE. <br><br>When enabled, Primal Beast is immune to inertia (stops and turns instantly without drifting), cannot be slowed, and is immune to any external knockbacks or push forces."
+
+		//Ringmaster-----------------------
+		"npc_dota_hero_ringmaster"												"Ringmaster"
+		"DOTA_Tooltip_ability_ringmaster_souvenir_select"						"Select Souvenir"
+		"DOTA_Tooltip_ability_ringmaster_souvenir_select_Description"			"Replaces the main ability with another one in a specific order: <br><br> <b>Force Staff<br>Escape Box<br>Unicycle</b>."
+
+		"DOTA_Tooltip_ability_ringmaster_force_staff"							"Souvenir Force Staff"
+		"DOTA_Tooltip_ability_ringmaster_force_staff_Description"				"Pushes the hero forward by %force_staff_distance% units."
+		"DOTA_Tooltip_ability_ringmaster_force_staff_force_staff_distance"		"PUSH DISTANCE:"
+
+		"DOTA_Tooltip_ability_ringmaster_box"									"Escape Box"
+		"DOTA_Tooltip_ability_ringmaster_box_Description"						"Traps the target enemy hero inside an escape box for %duration% seconds. <br> While inside, the victim cannot cast abilities, but they retain the ability to run. <br><br><font color=\"#FF3333\">Cannot cast on the ball holder.</font><br><br><font color=\"#FF4BD6\">Does not work on Goalie</font>"
+		"DOTA_Tooltip_ability_ringmaster_box_duration"							"DURATION:"
+
+		"DOTA_Tooltip_ability_ringmaster_unicycle"								"Unicycle"
+		"DOTA_Tooltip_ability_ringmaster_unicycle_Description"					"The hero jumps onto a unicycle for %duration% seconds. <br> During this time, standard movement controls are locked, the hero constantly accelerates, preserves inertia and becomes harder to turn."
+		"DOTA_Tooltip_ability_ringmaster_unicycle_duration"						"DURATION:"
+
+		"dota_hud_error_cant_cast_on_ball_holder"								"Cannot cast on the ball holder"
+
+		//Silencer-------------------------
+		"npc_dota_hero_silencer"												"Silencer"
+		"DOTA_Tooltip_ability_silencer_glaive_kick"								"Glaive Kick"
+		"DOTA_Tooltip_ability_silencer_glaive_kick_Description"					"Kicks the ball in the clicked direction, which penetrates through the first enemy hero hit."
+		"DOTA_Tooltip_ability_silencer_kick"									"Silence Kick"
+		"DOTA_Tooltip_ability_silencer_kick_Description"						"Kicks the ball in the clicked direction. <br><font color=\"#FF4BD6\"> To perform a back heel kick, use the ability on the hero\'s model. </font> <br><br><font color=\"#FF3333\"> There is a LIMITED amount of time for holding the ball inside or nearby a goal area! <br><br> These actions refresh the goalkeeper timer: <ul> <li> Holding the ball outside of a goal area for <b>3 seconds</b>; <li> Ball travelling far enough away from a goal area; <li> The opponent touching the ball. </ul> </font> <br><br><font color=\"#FF4BD6\"> The enemy who catches this ball will be silenced for 1.0 second, preventing them from using abilities or recovering mana. </font>"
+		"dota_hud_error_must_have_ball"											"Must have ball to cast"
+		"dota_hud_error_cant_cast_in_goal"										"Cannot cast inside goal area"
+
+		//Hoodwink--------------------------
+		"npc_dota_hero_hoodwink"												"Hoodwink"
+		"DOTA_Tooltip_ability_hoodwink_acorn_decoy"								"Decoy"
+		"DOTA_Tooltip_ability_hoodwink_acorn_decoy_Description"					"Creates an illusion of Hoodwink that runs to the target point and stays there.<br><br>The illusion cannot pick up the ball."
+		"DOTA_Tooltip_ability_hoodwink_acorn_decoy_duration"					"DURATION:"
+		"DOTA_Tooltip_ability_hoodwink_acorn_decoy_cast_range"					"CAST RANGE:"
+
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot"								"Scurry Shot"
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot_Description"					"Channeled ability. Fires a projectile in the target direction.<br><br>Heroes and the ball hit by the projectile will be knocked back. The ball is also affected.<br><br>Push force scales with channel time — maximum is reached at <font color=\"#ffaa00\">3</font> sec and does not increase further."
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot_max_channel_time"			"MAX CHANNEL TIME:"
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot_optimal_channel_time"		"TIME FOR MAX FORCE:"
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot_min_push_force"				"MIN PUSH FORCE:"
+		"DOTA_Tooltip_ability_hoodwink_scurry_shot_max_push_force"				"MAX PUSH FORCE:"
+
+		"banjoball_hud_healthbar_self"											"Toggle Self Health Bar"
+		"banjoball_hud_healthbar_ally"											"Toggle Ally Health Bars"
+		"banjoball_hud_healthbar_enemy"											"Toggle Enemy Health Bars"
+		"banjoball_hud_ally_ability_toggle"										"Toggle Ally Ability Icons"
+		"banjoball_hud_menu_toggle_tooltip"										"Toggle Menu Icons"
+		"banjoball_hud_store_tooltip"											"Cosmetics"
+		"banjoball_hud_store_close_tooltip"										"ESC to close"
+		"banjoball_hud_zoom_tooltip"											"Zoom<br>Use the mouse wheel to zoom in and out.<br>Lock and unlock zooming by toggling this."
+		"banjoball_hud_settings_tooltip"										"Settings"
+		"banjoball_hud_gui_close"												"Hide/reveal HUD"
+		"banjoball_clicker_toggle"												"Enable/disabe autoclicker <br><br> When autoclicker is active, use MOVE keybind to perform directional movement!! <br><br> If it still ain't working, make sure you've lauched the game with English keyboard layout. <br><br> Otherwise just toggle it off and use an external autoclicker, the in-game one makes 60 clicks per second."
+		"gameplay_log"															"Gameplay Log"
+		"shared_control"														"Shared Unit Control"
+		"banjoball_store_equipped"												"✔ Used"
+		"banjoball_store_equip"													"Use"
+		"banjoball_store_locked"												"Locked"
+
+		"banjoball_double_down_button"											"Double Down"
+		"banjoball_double_down_tooltip"											"Click to double the rating change (MMR) at the end of this game!"
+		"banjoball_double_down_activated"										"Rating change will be doubled!"
+
+		//******************** DRAFT LOCALIZATION ********************
+		"draft_title"															"DRAFT"
+		"draft_autostart"														"AUTOSTART"
+		"draft_autostart_short"													"AUTOSTART"
+		"draft_status_prep"														"PREPARATION..."
+		"draft_status_cap_vote"													"CAPTAIN SELECTION..."
+		"draft_status_pick_blue"												"BLUE TEAM TURN"
+		"draft_status_pick_red"													"RED TEAM TURN"
+		"draft_pause"															"Pause"
+		"draft_resume"															"Resume"
+		"draft_pause_infinite"													"Infinite"
+		"draft_vote_yes"														"WANT TO BE CAPTAIN"
+		"draft_vote_no"															"DON'T WANT TO BE CAPTAIN"
+		"draft_vote_random"														"RANDOMIZE TEAMS"
+		"draft_skip"															"SKIP DRAFT"
+	"draft_vote_random_tooltip"													"Requires {d:percent}% of votes. <br>Randomly shuffle team compositions instead of draft."
+	"draft_vote_training_tooltip"												"Requires {d:percent}% of votes. <br>Enable training mode with tools and debugging."
+
+		"draft_sec_short"														"s"
+		"draft_select_team_and_roles"											"Select Team and Role"
+		"draft_blue"															"Blue"
+		"draft_red"																"Red"
+		"draft_role_goalkeeper"													"Goalkeeper"
+		"draft_role_defender"													"Defender"
+		"draft_role_forward"													"Forward"
+
+		//=====================================
+		//      TOOLS LOCALIZATION
+		//=====================================
+		"banjoball_tools_header"												"TOOLS"
+		"banjoball_tools_section_spawn"											"Spawn"
+		"banjoball_tools_section_toggles"										"Toggles"
+		"banjoball_tools_section_actions"										"Actions"
+
+		"banjoball_tools_spawn_ally"											"+ALLY BOT"
+		"banjoball_tools_spawn_enemy"											"+ENEMY BOT"
+		"banjoball_tools_spawn_ally_title"										"SPAWN ALLIED BOT"
+		"banjoball_tools_spawn_enemy_title"										"SPAWN ENEMY BOT"
+		"banjoball_tools_remove_selected"										"-REMOVE"
+
+		"banjoball_tools_wtf_mode"												"WTF Mode"
+		"banjoball_tools_inf_mana"												"Inf. Mana"
+		"banjoball_tools_goal_limit_1000"										"Endless Game"
+		"banjoball_tools_no_goal_respawn"										"Instant Start"
+		"banjoball_tools_refresh"												"Refresh"
+		"banjoball_tools_tp_to_ball"											"Teleport to Ball"
+		"banjoball_tools_ball_to_me"											"Ball to Hero"
+		"banjoball_tools_pause"													"Pause"
+		"banjoball_tools_one_tick_pause"										">>"
+
+		"banjoball_tools_no_goal_respawn_tooltip"								"After a goal, the next round starts instantly without any countdown or delays"
+		"banjoball_tools_wtf_mode_tooltip"										"Removes ability cooldowns"
+		"banjoball_tools_inf_mana_tooltip"										"Mana is not consumed while running"
+		"banjoball_tools_goal_limit_1000_tooltip"								"To end the game, 9999 goals must be scored"
+		"banjoball_tools_refresh_tooltip"										"ыы"
+		"banjoball_tools_spawn_ally_tooltip"									"Opens the menu to select and spawn an allied bot"
+		"banjoball_tools_spawn_enemy_tooltip"									"Opens the menu to select and spawn an enemy bot"
+		"banjoball_tools_tp_to_ball_tooltip"									"Teleports the selected hero to the ball"
+		"banjoball_tools_ball_to_me_tooltip"									"Teleports the ball to the selected hero's feet"
+		"banjoball_tools_pause_tooltip"											"Pauses the game"
+		"banjoball_tools_one_tick_pause_tooltip"								"Resumes and then pauses the game after 5 game ticks"
+		"banjoball_tools_remove_selected_tooltip"								"Removes the selected bot"
+		"banjoball_tools_spawn_limit_reached_tooltip"							"Remove a bot to spawn a new one"
+
+		"banjoball_attr_strength"												"STRENGTH"
+		"banjoball_attr_agility"												"AGILITY"
+		"banjoball_attr_intellect"												"INTELLIGENCE"
+		"banjoball_attr_universal"												"UNIVERSAL"
+
+		"banjoball_close_esc"													"Close ESC"
+
+		//=====================================
+		//      DEBUG LOCALIZATION
+		//=====================================
+
+		"banjoball_physics_header"												"DEBUG"
+		"banjoball_physics_tick"												"Game Tick:"
+		"banjoball_physics_speed"												"Speed:"
+		"banjoball_physics_mana"												"Mana:"
+		"banjoball_physics_mana_drain"											"Mana Drain:"
+		"banjoball_physics_mana_regen"											"Mana Regen:"
+		"banjoball_physics_ball_speed"											"Ball Speed:"
+		"banjoball_physics_coords"												"X/Y/Z:"
+		"banjoball_physics_ball_coords"											"Ball X/Y/Z:"
+
+		"banjoball_debug_error_team_limit"										"[DEBUG] ERROR: 5 heroes already in this team. Limit exceeded!"
+		"banjoball_debug_error_spawn_failed"									"[DEBUG] ERROR: Failed to spawn bot!"
+		"banjoball_debug_error_remove_player"									"[DEBUG] ERROR: Cannot remove real players!"
+		"banjoball_debug_error_remove_only_bots"								"[DEBUG] ERROR: Only custom bots can be removed!"
+	}
+}

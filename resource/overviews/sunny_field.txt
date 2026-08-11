@@ -1,0 +1,8 @@
+sunny_field
+{
+	material materials/overviews/sunny_field.vmat
+	pos_x -3449
+	pos_y 3433
+	scale 6.713
+}
+
